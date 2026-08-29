@@ -1,5 +1,5 @@
-import React from 'react';
-import { Heart, Eye, ShoppingBag, Sparkles, Star, MessageCircle } from 'lucide-react';
+import React, { useState } from 'react';
+import { Heart, Eye, ShoppingBag, Sparkles, Star, MessageCircle, Scissors } from 'lucide-react';
 import { Product } from '../../types/ecommerce';
 import { useCart } from '../../context/CartContext';
 import { useWishlist } from '../../context/WishlistContext';
@@ -19,13 +19,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   const { addToCart } = useCart();
   const { toggleWishlist, isInWishlist } = useWishlist();
   const { format } = useCurrency();
+  const [selectedSize, setSelectedSize] = useState('M');
 
   const discountPercent = Math.round(
     ((product.regular_price - product.price) / product.regular_price) * 100
   );
 
   const whatsappMessage = encodeURIComponent(
-    `Hello Aanal Gurukul, I would like to buy "${product.title}" (Price: ₹${product.price}, SKU: ${product.sku}). Please share availability and payment details.`
+    `Hello Aanal Gurukul! I would like to buy "${product.title}" (Size: ${selectedSize}, Price: ₹${product.price}, SKU: ${product.sku}). Please share availability and payment details.`
   );
 
   return (
@@ -114,6 +115,34 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           <p className="text-xs text-slate-500 line-clamp-1 mt-1">
             {product.specifications.work}
           </p>
+
+          {/* SIZES AVAILABLE SECTION ON PRODUCT CARD */}
+          <div className="mt-2.5 pt-2 border-t border-dashed border-slate-200">
+            <div className="flex items-center justify-between text-[10px] text-slate-500 font-semibold mb-1">
+              <span className="uppercase tracking-wider text-slate-600">Available Sizes:</span>
+              <span className="text-gold-700 font-bold">Selected: {selectedSize}</span>
+            </div>
+            <div className="flex flex-wrap gap-1">
+              {product.sizes.map((size) => (
+                <button
+                  key={size}
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedSize(size);
+                  }}
+                  className={`px-1.5 py-0.5 text-[10px] font-mono font-bold rounded transition-all border ${
+                    selectedSize === size
+                      ? 'bg-royal-900 text-gold-300 border-royal-900 shadow-sm'
+                      : 'bg-[#faf8f5] text-slate-600 border-slate-200 hover:border-gold-400 hover:bg-gold-50'
+                  }`}
+                  title={`Select Size ${size}`}
+                >
+                  {size}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Price & Action Buttons: Add to Cart + WhatsApp Buy Box */}
@@ -142,8 +171,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               target="_blank"
               rel="noreferrer"
               onClick={(e) => e.stopPropagation()}
-              className="bg-[#25D366] hover:bg-[#20bd5a] text-white p-2.5 rounded-xl transition-colors shadow-sm flex items-center justify-center group/wa"
-              title="Buy Directly on WhatsApp"
+              className="bg-[#25D366] hover:bg-[#20bd5a] text-white p-2.5 rounded-xl transition-colors shadow-sm flex items-center justify-center"
+              title={`Buy Size ${selectedSize} Directly on WhatsApp`}
             >
               <MessageCircle className="w-4 h-4 fill-white" />
             </a>
@@ -152,10 +181,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             <button
               onClick={(e) => {
                 e.stopPropagation();
-                addToCart(product, 1, 'M', product.colors[0], 'ready-to-wear');
+                addToCart(product, 1, selectedSize, product.colors[0], 'ready-to-wear');
               }}
               className="bg-[#1b2a4a] hover:bg-gold-600 text-gold-200 hover:text-royal-950 p-2.5 rounded-xl transition-colors shadow-sm flex items-center justify-center"
-              title="Add to Cart"
+              title={`Add Size ${selectedSize} to Cart`}
             >
               <ShoppingBag className="w-4 h-4" />
             </button>
