@@ -3,15 +3,15 @@ import { Product } from '../types/ecommerce';
 export const PRODUCTS: Product[] = [
   {
     id: "aanal-001",
-    slug: "hot-pink-bandhej-drapped-gown",
-    title: "Hot Pink Bandhej Drapped Gown",
+    slug: "hot-pink-bandhej-draped-gown",
+    title: "Hot Pink Bandhej Draped Gown",
     price: 6490,
     regular_price: 8990,
     currency: "INR",
     in_stock: true,
     stock_count: 5,
     sku: "AG-GOW-001",
-    description: "Make a show-stopping entrance with this Hot Pink Bandhej Drapped Gown. Featuring artisanal Rajasthani Bandhej tie-dye patterns on pure georgette, an impeccably structured corset bodice adorned with micro-pearls and hand zardozi work, and an asymmetrical flowing drape silhouette.",
+    description: "Make a show-stopping entrance with this Hot Pink Bandhej Draped Gown. Featuring artisanal Rajasthani Bandhej tie-dye patterns on pure georgette, an impeccably structured corset bodice adorned with micro-pearls and hand zardozi work, and an asymmetrical flowing drape silhouette.",
     short_description: "Pure georgette draped gown with traditional Bandhej prints and hand-embroidered corset bodice.",
     categories: ["Gowns", "Indowestern", "Dresses"],
     occasions: ["Sangeet", "Cocktail", "Reception", "Wedding"],
@@ -35,8 +35,8 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "aanal-002",
-    slug: "amazonas-green-drapped-gown",
-    title: "Amazonas Green Drapped Gown",
+    slug: "amazonas-green-draped-gown",
+    title: "Amazonas Green Draped Gown",
     price: 6890,
     regular_price: 9490,
     currency: "INR",
@@ -67,7 +67,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "aanal-003",
-    slug: "vivid-red-paplum-sharara",
+    slug: "vivid-red-peplum-sharara",
     title: "Vivid Red Peplum Sharara Set",
     price: 7490,
     regular_price: 10290,
@@ -108,7 +108,7 @@ export const PRODUCTS: Product[] = [
     sku: "AG-CRD-004",
     description: "Handwoven in the royal textile heritage of Kutch, this Phoenix Orange pure Gaji Silk co-ord set features traditional Lagdi patta borders, modern asymmetric tunic cut, and tailored cigarette trousers.",
     short_description: "Pure Gaji silk designer coordinate set in vibrant orange with traditional golden zari borders.",
-    categories: ["Cord Set Plazo", "Indowestern", "Kurti"],
+    categories: ["Co-ords", "Indowestern", "Palazzo"],
     occasions: ["Festive", "Puja", "Mehendi", "Family Gatherings"],
     images: [
       "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-19-at-15.25.04.jpeg"
@@ -138,8 +138,8 @@ export const PRODUCTS: Product[] = [
     stock_count: 7,
     sku: "AG-CRD-005",
     description: "Sun-kissed Medallion Yellow ensemble featuring handblock printed mythological and floral Kalamkari motifs on organic silk-cotton, styled with contemporary high-low jacket kurti and relaxed wide-leg culottes.",
-    short_description: "Kalamkari printed organic silk-cotton coord set with handcrafted metallic buttons.",
-    categories: ["Cord Set Plazo", "Indowestern", "Kurti"],
+    short_description: "Kalamkari printed organic silk-cotton co-ord set with handcrafted metallic buttons.",
+    categories: ["Co-ords", "Indowestern", "Palazzo"],
     occasions: ["Haldi", "Day Wedding", "Festive", "Puja"],
     images: [
       "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-19-at-15.25.03-1.jpeg"
@@ -201,7 +201,7 @@ export const PRODUCTS: Product[] = [
     sku: "AG-SHR-007",
     description: "Make a royal statement in this Peacock Blue 3-piece indo-western set. Features a sweetheart neckline crop top, flared palazzo pants, and a floor-length sheer organza shrug embroidered with gold foliage.",
     short_description: "3-piece peacock blue outfit with hand-embroidered crop top, palazzo, and sheer jacket shrug.",
-    categories: ["Plazo Shrug", "Indowestern", "Croptop"],
+    categories: ["Palazzo & Shrug", "Indowestern", "Croptop"],
     occasions: ["Sangeet", "Reception", "Party", "Cocktail"],
     images: [
       "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-19-at-15.10.01.jpeg"
@@ -222,7 +222,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "aanal-008",
-    slug: "navy-blue-shrug-with-plazo",
+    slug: "navy-blue-shrug-with-palazzo",
     title: "Navy Blue Heavy Shrug with Palazzo Set",
     price: 6790,
     regular_price: 9490,
@@ -232,7 +232,7 @@ export const PRODUCTS: Product[] = [
     sku: "AG-SHR-008",
     description: "Midnight glamour at its finest. Rich navy blue georgette 3-piece fusion wear adorned with antique copper and silver threadwork, paired with wide-leg palazzo pants and flowy caped shrug.",
     short_description: "Royal navy blue 3-piece palazzo set with long cape shrug and zardozi detailing.",
-    categories: ["Plazo Shrug", "Indowestern", "Palazzo"],
+    categories: ["Palazzo & Shrug", "Indowestern", "Palazzo"],
     occasions: ["Reception", "Cocktail", "Party", "Sangeet"],
     images: [
       "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-19-at-15.09.58.jpeg"
@@ -284,7 +284,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "aanal-010",
-    slug: "pista-croset-shrug-with-plazo",
+    slug: "pista-corset-shrug-with-palazzo",
     title: "Pista Green Corset Shrug with Palazzo Set",
     price: 6590,
     regular_price: 9190,
@@ -294,7 +294,7 @@ export const PRODUCTS: Product[] = [
     sku: "AG-SHR-010",
     description: "Subtle elegance in refreshing pistachio green. Features a structured sweetheart corset top, pleated sharara-palazzo pants, and a full-sleeved embroidered sheer shrug with scalloped zardozi borders.",
     short_description: "Pistachio green corset top, pleated palazzo, and sheer shrug with delicate thread embroidery.",
-    categories: ["Plazo Shrug", "Indowestern", "Palazzo"],
+    categories: ["Palazzo & Shrug", "Indowestern", "Palazzo"],
     occasions: ["Sangeet", "Mehendi", "Reception", "Party"],
     images: [
       "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-19-at-15.09.55.jpeg"
@@ -315,7 +315,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "aanal-011",
-    slug: "lemon-yellow-lakhanvi-nayracut",
+    slug: "lemon-yellow-lakhnavi-nayra-cut",
     title: "Lemon Yellow Lakhnavi Nayra Cut Suit",
     price: 4390,
     regular_price: 6190,
@@ -325,7 +325,7 @@ export const PRODUCTS: Product[] = [
     sku: "AG-NAY-011",
     description: "Authentic Lucknowi Chikankari craftsmanship meets modern Nayra-cut silhouette in luminous lemon yellow. Detailed with intricate shadow-work embroidery, mukaish highlights, side-slit gather detailing, and matching cigarette pants.",
     short_description: "Lemon yellow Lakhnavi Chikankari Nayra cut suit with matching trousers and chiffon dupatta.",
-    categories: ["Nayracut", "Kurti", "Dresses", "Plus Size"],
+    categories: ["Nayra Cut", "Palazzo", "Plus Size"],
     occasions: ["Haldi", "Festive", "Puja", "Family Functions"],
     images: [
       "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-19-at-15.09.55-2.jpeg"
@@ -346,7 +346,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "aanal-012",
-    slug: "vine-purple-croptop-with-shrug",
+    slug: "wine-purple-croptop-with-shrug",
     title: "Wine Purple Crop Top with Shrug & Skirt",
     price: 7990,
     regular_price: 11190,
@@ -408,7 +408,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "aanal-014",
-    slug: "shibori-lemon-yellow-naryara-dress",
+    slug: "shibori-lemon-yellow-nayra-dress",
     title: "Shibori Lemon Yellow Nayra Cut Dress",
     price: 4690,
     regular_price: 6590,
@@ -418,7 +418,7 @@ export const PRODUCTS: Product[] = [
     sku: "AG-NAY-014",
     description: "Hand-dyed Shibori tie-dye patterns in luminous lemon yellow and white on pure georgette. Styled in an elegant high side-slit Nayra cut silhouette with mirror work belt and matching pants.",
     short_description: "Handcrafted Shibori print Nayra dress with mirror work yoke and matching pants.",
-    categories: ["Nayracut", "Dresses", "Kurti"],
+    categories: ["Nayra Cut", "Dresses", "Palazzo"],
     occasions: ["Haldi", "Mehendi", "Festive", "Day Functions"],
     images: [
       "https://aanalgurukul.com/wp-content/uploads/2023/03/WhatsApp-Image-2023-02-19-at-2.42.45-PM-1.jpeg"
@@ -439,8 +439,8 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "aanal-015",
-    slug: "hot-pink-purple-nayara-dress",
-    title: "Hot Pink & Purple Ombre Nayra Dress",
+    slug: "hot-pink-purple-nayra-dress",
+    title: "Hot Pink & Purple Ombre Nayra Cut Dress",
     price: 4890,
     regular_price: 6890,
     currency: "INR",
@@ -449,7 +449,7 @@ export const PRODUCTS: Product[] = [
     sku: "AG-NAY-015",
     description: "Vibrant dual ombre sunset shades transition from hot pink to royal purple. Embellished with delicate resham thread embroidery and cutdana work along the neckline and side gathers.",
     short_description: "Dual-tone ombre Nayra cut suit set in bright pink and purple with designer dupatta.",
-    categories: ["Nayracut", "Dresses", "Plus Size"],
+    categories: ["Nayra Cut", "Dresses", "Plus Size"],
     occasions: ["Festive", "Sangeet", "Mehendi", "Party"],
     images: [
       "https://aanalgurukul.com/wp-content/uploads/2023/03/WhatsApp-Image-2023-02-19-at-2.42.45-PM.jpeg"
@@ -470,7 +470,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "aanal-016",
-    slug: "wine-doriwork-lehngacholi",
+    slug: "wine-dori-work-lehenga-choli",
     title: "Wine Handcrafted Dori Work Lehenga Choli",
     price: 11990,
     regular_price: 16990,
@@ -501,7 +501,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "aanal-017",
-    slug: "onion-pink-kinkhab-plazo-dress",
+    slug: "onion-pink-kinkhab-palazzo-dress",
     title: "Onion Pink Kinkhab Brocade Palazzo Dress",
     price: 5990,
     regular_price: 8490,
@@ -511,7 +511,7 @@ export const PRODUCTS: Product[] = [
     sku: "AG-PLZ-017",
     description: "Woven with heritage Ahmedabad Kinkhab brocade techniques, this pastel onion pink palazzo suit combines royal vintage luster with clean modern lines and delicate pearl fringes.",
     short_description: "Pastel onion pink Kinkhab brocade kurti dress with flared palazzo and pearl accents.",
-    categories: ["Plazo Dress", "Cord Set Plazo", "Indowestern"],
+    categories: ["Palazzo", "Co-ords", "Indowestern"],
     occasions: ["Sangeet", "Festive", "Reception", "Family Functions"],
     images: [
       "https://aanalgurukul.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-29-at-1.43.48-PM.jpeg"
@@ -532,7 +532,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "aanal-018",
-    slug: "pink-handwork-plazo-jacket",
+    slug: "pink-handwork-palazzo-jacket",
     title: "Rose Pink Handwork Palazzo Jacket Suit",
     price: 6990,
     regular_price: 9890,
@@ -542,7 +542,7 @@ export const PRODUCTS: Product[] = [
     sku: "AG-SHR-018",
     description: "Rose pink 3-piece luxury Indo-western outfit. Features a floor-skimming sheer jacket adorned with hand-embroidered cutdana and gota flowers, over a tailored bustier and wide palazzo pants.",
     short_description: "Rose pink handwork jacket with tailored bustier and flowy palazzo trousers.",
-    categories: ["Plazo Shrug", "Indowestern", "Palazzo"],
+    categories: ["Palazzo & Shrug", "Indowestern", "Palazzo"],
     occasions: ["Sangeet", "Reception", "Cocktail", "Party"],
     images: [
       "https://aanalgurukul.com/wp-content/uploads/2026/07/Picsart_26-07-03_15-02-21-398-scaled.png"
@@ -563,7 +563,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "aanal-019",
-    slug: "rani-handwork-chaniyacholi",
+    slug: "rani-handwork-chaniya-choli",
     title: "Rani Pink Handwork Chaniya Choli",
     price: 10490,
     regular_price: 14990,
@@ -594,7 +594,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "aanal-020",
-    slug: "lovender-lehngacholi",
+    slug: "lavender-pastel-lehenga-choli",
     title: "Lavender Pastel Floral Lehenga Choli",
     price: 9290,
     regular_price: 13290,
@@ -635,7 +635,7 @@ export const PRODUCTS: Product[] = [
     sku: "AG-PLZ-021",
     description: "Luxurious salsa silk in refreshing mint pista. Detailed with handcrafted zardozi neck yoke, scalloped side vents, and wide-leg palazzo pants with golden hem borders.",
     short_description: "Pure salsa silk handcrafted palazzo suit in soothing mint green with zardozi embroidery.",
-    categories: ["Plazo Dress", "Sharara", "Kurti", "Plus Size"],
+    categories: ["Palazzo", "Sharara", "Plus Size"],
     occasions: ["Festive", "Puja", "Family Gathering", "Mehendi"],
     images: [
       "https://aanalgurukul.com/wp-content/uploads/2026/07/Picsart_26-07-07_14-39-31-106-scaled.png"
@@ -666,7 +666,7 @@ export const PRODUCTS: Product[] = [
     sku: "AG-SHA-022",
     description: "Deep regal royal blue pure chinon silk 3-piece suit set. Features a heavily embroidered neckline with silver zari and mirror work, coupled with convertible sharara-palazzo pants and a scalloped dupatta.",
     short_description: "Royal blue pure chinon silk suit set with intricate mirror work and convertible sharara-palazzo.",
-    categories: ["Sharara", "Plazo Dress", "Kurti", "Plus Size"],
+    categories: ["Sharara", "Palazzo", "Plus Size"],
     occasions: ["Sangeet", "Reception", "Festive", "Wedding"],
     images: [
       "https://aanalgurukul.com/wp-content/uploads/2026/07/Picsart_26-07-07_23-50-08-307.jpg-scaled.jpeg"
@@ -692,9 +692,9 @@ export const CATEGORIES = [
   { id: "Lehenga", name: "Lehenga & Chaniya Choli", count: 8, image: "https://aanalgurukul.com/wp-content/uploads/2026/07/Photoroom-20250408_191909.png" },
   { id: "Gowns", name: "Designer Gowns", count: 4, image: "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-16-at-12.47.43-2.jpeg" },
   { id: "Sharara", name: "Sharara & Palazzo Suits", count: 6, image: "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-19-at-2.19.42-PM.jpeg" },
-  { id: "Plazo Shrug", name: "Shrug & Jacket Sets", count: 5, image: "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-19-at-15.10.01.jpeg" },
-  { id: "Nayracut", name: "Nayra Cut Suits", count: 4, image: "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-19-at-15.09.55-2.jpeg" },
-  { id: "Cord Set Plazo", name: "Indo-Western Co-ords", count: 4, image: "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-19-at-15.25.04.jpeg" },
+  { id: "Palazzo & Shrug", name: "Shrug & Jacket Sets", count: 5, image: "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-19-at-15.10.01.jpeg" },
+  { id: "Nayra Cut", name: "Nayra Cut Suits", count: 4, image: "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-19-at-15.09.55-2.jpeg" },
+  { id: "Co-ords", name: "Indo-Western Co-ords", count: 4, image: "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-19-at-15.25.04.jpeg" },
   { id: "Plus Size", name: "Plus Size Couture (3XL-5XL)", count: 5, image: "https://aanalgurukul.com/wp-content/uploads/2026/07/Picsart_26-07-07_14-39-31-106-scaled.png" }
 ];
 

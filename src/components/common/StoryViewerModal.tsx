@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Sparkles, ShoppingBag, Eye } from 'lucide-react';
+import { X, ShoppingBag, Eye, MessageCircle } from 'lucide-react';
 import { Product } from '../../types/ecommerce';
 import { useCart } from '../../context/CartContext';
 import { useCurrency } from '../../context/CurrencyContext';
@@ -22,6 +22,10 @@ export const StoryViewerModal: React.FC<StoryViewerModalProps> = ({
 
   if (!isOpen || !product) return null;
 
+  const whatsappMessage = encodeURIComponent(
+    `Hello Aanal Gurukul! I saw "${product.title}" on your story reel. I would like to buy it (Price: ₹${product.price}, SKU: ${product.sku}).`
+  );
+
   return (
     <div className="fixed inset-0 z-50 overflow-hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
       <div className="relative max-w-sm w-full h-[80vh] rounded-3xl overflow-hidden shadow-2xl border border-gold-500/40 flex flex-col justify-between text-white">
@@ -39,7 +43,7 @@ export const StoryViewerModal: React.FC<StoryViewerModalProps> = ({
             </span>
             <div>
               <p className="font-serif font-bold text-xs">Aanal Gurukul Spotlight</p>
-              <p className="text-[10px] text-slate-300">Ahmedabad Flagship Boutique</p>
+              <p className="text-[10px] text-slate-300">Ahmedabad Flagship Store</p>
             </div>
           </div>
           <button onClick={onClose} className="p-1 text-white hover:text-gold-300">
@@ -65,7 +69,7 @@ export const StoryViewerModal: React.FC<StoryViewerModalProps> = ({
             <p className="font-mono text-xs font-bold text-gold-400 mt-0.5">{format(product.price)}</p>
           </div>
 
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-3 gap-2">
             <button
               onClick={() => {
                 addToCart(product);
@@ -73,16 +77,26 @@ export const StoryViewerModal: React.FC<StoryViewerModalProps> = ({
               }}
               className="py-3 bg-gold-gradient text-royal-950 font-bold text-xs uppercase tracking-wider rounded-xl shadow flex items-center justify-center gap-1.5"
             >
-              <ShoppingBag className="w-4 h-4" /> Quick Buy
+              <ShoppingBag className="w-4 h-4" /> Bag
             </button>
+
+            <a
+              href={`https://wa.me/917600917948?text=${whatsappMessage}`}
+              target="_blank"
+              rel="noreferrer"
+              className="py-3 bg-[#25D366] text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow flex items-center justify-center gap-1.5"
+            >
+              <MessageCircle className="w-4 h-4 fill-white" /> WhatsApp
+            </a>
+
             <button
               onClick={() => {
                 onClose();
                 onViewProduct(product);
               }}
-              className="py-3 bg-white/20 hover:bg-white/30 backdrop-blur-md text-white font-semibold text-xs rounded-xl flex items-center justify-center gap-1.5"
+              className="py-3 bg-white/20 hover:bg-white/30 backdrop-blur-md text-white font-semibold text-xs rounded-xl flex items-center justify-center gap-1"
             >
-              <Eye className="w-4 h-4" /> View Details
+              <Eye className="w-4 h-4" /> Details
             </button>
           </div>
         </div>

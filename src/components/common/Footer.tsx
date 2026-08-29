@@ -3,7 +3,6 @@ import {
   MapPin, 
   Phone, 
   Mail, 
-  ShieldCheck, 
   Truck, 
   Scissors, 
   CreditCard,
@@ -136,8 +135,8 @@ export const Footer: React.FC<FooterProps> = ({
               <li><button onClick={() => onNavigate('shop', 'Lehenga')} className="hover:text-gold-400 transition-colors">Chaniya Choli</button></li>
               <li><button onClick={() => onNavigate('shop', 'Gowns')} className="hover:text-gold-400 transition-colors">Designer Gowns</button></li>
               <li><button onClick={() => onNavigate('shop', 'Sharara')} className="hover:text-gold-400 transition-colors">Sharara &amp; Palazzo</button></li>
-              <li><button onClick={() => onNavigate('shop', 'Nayracut')} className="hover:text-gold-400 transition-colors">Nayra Cut Suits</button></li>
-              <li><button onClick={() => onNavigate('shop', 'Cord Set Plazo')} className="hover:text-gold-400 transition-colors">Indo-Western Co-ords</button></li>
+              <li><button onClick={() => onNavigate('shop', 'Nayra Cut')} className="hover:text-gold-400 transition-colors">Nayra Cut Suits</button></li>
+              <li><button onClick={() => onNavigate('shop', 'Co-ords')} className="hover:text-gold-400 transition-colors">Indo-Western Co-ords</button></li>
               <li><button onClick={() => onNavigate('shop', 'Plus Size')} className="hover:text-gold-400 transition-colors">Plus Size Couture (3XL-5XL)</button></li>
             </ul>
           </div>
@@ -149,8 +148,8 @@ export const Footer: React.FC<FooterProps> = ({
             </h4>
             <ul className="space-y-2 text-xs text-slate-300">
               <li><button onClick={() => onNavigate('track')} className="hover:text-gold-400 transition-colors font-medium text-gold-300">Track Your Order</button></li>
-              <li><button onClick={onOpenBookStylist} className="hover:text-gold-400 transition-colors">Book Video Call Consultation</button></li>
-              <li><button onClick={onOpenStoreLocator} className="hover:text-gold-400 transition-colors">Store Directions (Gurukul)</button></li>
+              <li><button onClick={onOpenBookStylist} className="hover:text-gold-400 transition-colors">Book a Call Now</button></li>
+              <li><button onClick={onOpenStoreLocator} className="hover:text-gold-400 transition-colors">Flagship Store Directions (Gurukul)</button></li>
               <li><button onClick={() => onNavigate('wishlist')} className="hover:text-gold-400 transition-colors">My Wishlist</button></li>
               <li><button onClick={() => onNavigate('admin')} className="hover:text-gold-400 transition-colors text-slate-400">Merchant Portal &amp; Google Feed</button></li>
             </ul>
@@ -159,7 +158,7 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Contact Details */}
           <div>
             <h4 className="font-serif font-bold text-white text-sm tracking-wider uppercase mb-4 border-b border-gold-500/30 pb-2">
-              Flagship Boutique
+              Flagship Store
             </h4>
             <div className="space-y-3 text-xs text-slate-300">
               <p className="flex items-start gap-2">

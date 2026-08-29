@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Calendar, Clock, Phone, Video, CheckCircle2 } from 'lucide-react';
+import { X, Phone, CheckCircle2 } from 'lucide-react';
 
 interface BookStylistModalProps {
   isOpen: boolean;
@@ -12,7 +12,7 @@ export const BookStylistModal: React.FC<BookStylistModalProps> = ({ isOpen, onCl
   const [phone, setPhone] = useState('');
   const [date, setDate] = useState('');
   const [time, setTime] = useState('3:00 PM - 4:00 PM');
-  const [occasion, setOccasion] = useState('Bridal Wedding');
+  const [occasion, setOccasion] = useState('Bridal Wedding Lehenga');
 
   if (!isOpen) return null;
 
@@ -29,11 +29,11 @@ export const BookStylistModal: React.FC<BookStylistModalProps> = ({ isOpen, onCl
         <div className="bg-[#1b2a4a] text-white p-6 flex justify-between items-center border-b border-gold-500/30">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-gold-500/20 flex items-center justify-center text-gold-300">
-              <Video className="w-5 h-5" />
+              <Phone className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="font-serif text-lg font-bold">Book a Virtual Stylist Call</h3>
-              <p className="text-xs text-slate-300">Live 1-on-1 Consultation with Aanal Gurukul Designer</p>
+              <h3 className="font-serif text-lg font-bold">Book a Call Now</h3>
+              <p className="text-xs text-slate-300">1-on-1 Consultation with Aanal Gurukul Senior Designer</p>
             </div>
           </div>
           <button onClick={onClose} className="text-slate-300 hover:text-white p-1">
@@ -46,9 +46,9 @@ export const BookStylistModal: React.FC<BookStylistModalProps> = ({ isOpen, onCl
             <div className="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
               <CheckCircle2 className="w-8 h-8" />
             </div>
-            <h4 className="font-serif font-bold text-xl text-royal-950">Appointment Confirmed!</h4>
+            <h4 className="font-serif font-bold text-xl text-royal-950">Call Request Confirmed!</h4>
             <p className="text-xs text-slate-600 max-w-sm mx-auto">
-              Thank you {name}! Our senior stylist will call you on <strong>{phone}</strong> for your video appointment on <strong>{date || 'selected date'}</strong> at <strong>{time}</strong>.
+              Thank you {name}! Our senior stylist will call you on <strong>{phone}</strong> on <strong>{date || 'selected date'}</strong> at <strong>{time}</strong>.
             </p>
             <button
               onClick={() => {
@@ -136,7 +136,7 @@ export const BookStylistModal: React.FC<BookStylistModalProps> = ({ isOpen, onCl
                 type="submit"
                 className="px-6 py-2.5 bg-royal-900 text-gold-300 text-xs font-bold uppercase tracking-wider rounded-xl hover:bg-gold-600 hover:text-royal-950 transition-colors shadow"
               >
-                Confirm Video Call
+                Confirm Call Booking
               </button>
             </div>
           </form>

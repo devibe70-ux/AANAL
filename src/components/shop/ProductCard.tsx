@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Eye, ShoppingBag, Sparkles, Star } from 'lucide-react';
+import { Heart, Eye, ShoppingBag, Sparkles, Star, MessageCircle } from 'lucide-react';
 import { Product } from '../../types/ecommerce';
 import { useCart } from '../../context/CartContext';
 import { useWishlist } from '../../context/WishlistContext';
@@ -22,6 +22,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
   const discountPercent = Math.round(
     ((product.regular_price - product.price) / product.regular_price) * 100
+  );
+
+  const whatsappMessage = encodeURIComponent(
+    `Hello Aanal Gurukul, I would like to buy "${product.title}" (Price: ₹${product.price}, SKU: ${product.sku}). Please share availability and payment details.`
   );
 
   return (
@@ -112,8 +116,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           </p>
         </div>
 
-        {/* Price & Add to Cart button */}
-        <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
+        {/* Price & Action Buttons: Add to Cart + WhatsApp Buy Box */}
+        <div className="pt-2 border-t border-slate-100 flex items-center justify-between gap-2">
           <div>
             <div className="flex items-baseline gap-2">
               <span className="font-mono text-base font-bold text-royal-900">
@@ -130,13 +134,32 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             </span>
           </div>
 
-          <button
-            onClick={() => addToCart(product, 1, 'M', product.colors[0], 'ready-to-wear')}
-            className="bg-[#1b2a4a] hover:bg-gold-600 text-gold-200 hover:text-royal-950 p-2.5 rounded-xl transition-colors shadow-sm flex items-center justify-center"
-            title="Add to Cart"
-          >
-            <ShoppingBag className="w-4 h-4" />
-          </button>
+          {/* Dual Buttons: WhatsApp Buy Box + Add to Cart */}
+          <div className="flex items-center gap-1.5">
+            {/* WhatsApp Direct Buy Box */}
+            <a
+              href={`https://wa.me/917600917948?text=${whatsappMessage}`}
+              target="_blank"
+              rel="noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="bg-[#25D366] hover:bg-[#20bd5a] text-white p-2.5 rounded-xl transition-colors shadow-sm flex items-center justify-center group/wa"
+              title="Buy Directly on WhatsApp"
+            >
+              <MessageCircle className="w-4 h-4 fill-white" />
+            </a>
+
+            {/* Add to Cart Button */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                addToCart(product, 1, 'M', product.colors[0], 'ready-to-wear');
+              }}
+              className="bg-[#1b2a4a] hover:bg-gold-600 text-gold-200 hover:text-royal-950 p-2.5 rounded-xl transition-colors shadow-sm flex items-center justify-center"
+              title="Add to Cart"
+            >
+              <ShoppingBag className="w-4 h-4" />
+            </button>
+          </div>
         </div>
 
       </div>

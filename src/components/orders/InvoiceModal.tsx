@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Printer, Download, Sparkles, CheckCircle2 } from 'lucide-react';
+import { X, Printer } from 'lucide-react';
 import { Order } from '../../types/ecommerce';
 import { formatPrice } from '../../utils/currency';
 
@@ -47,7 +47,7 @@ export const InvoiceModal: React.FC<InvoiceModalProps> = ({ order, isOpen, onClo
                   AANAL GURUKUL
                 </span>
               </div>
-              <p className="text-xs text-slate-500 mt-1">Luxury Ethnic &amp; Designer Boutique</p>
+              <p className="text-xs text-slate-500 mt-1">Luxury Ethnic &amp; Haute Couture Flagship Store</p>
               <p className="text-[11px] text-slate-500 max-w-xs mt-0.5">
                 G4 Shantam Complex, Gurukul Road, Ahmedabad, Gujarat 380052 India
               </p>
@@ -140,7 +140,7 @@ export const InvoiceModal: React.FC<InvoiceModalProps> = ({ order, isOpen, onClo
           </div>
 
           <div className="text-[10px] text-slate-400 text-center pt-6 border-t border-slate-100">
-            Thank you for choosing Aanal Gurukul Ahmedabad. For care or styling queries, reach us at +91 76009 17948.
+            Thank you for choosing Aanal Gurukul Flagship Store, Ahmedabad. For care or styling queries, reach us at +91 76009 17948.
           </div>
 
         </div>

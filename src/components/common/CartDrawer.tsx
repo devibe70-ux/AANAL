@@ -9,7 +9,8 @@ import {
   ArrowRight, 
   CheckCircle2, 
   Truck, 
-  Scissors 
+  Scissors,
+  MessageCircle
 } from 'lucide-react';
 import { useCart } from '../../context/CartContext';
 import { useCurrency } from '../../context/CurrencyContext';
@@ -53,6 +54,15 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
     setCouponMessage({ success: res.success, text: res.message });
     if (res.success) setCouponInput('');
   };
+
+  const whatsappCartMessage = encodeURIComponent(
+    `Hello Aanal Gurukul! I would like to order the following items from my cart:\n\n` +
+    cart.map((item, i) => `${i+1}. ${item.product.title} (Size: ${item.selectedSize}, Qty: ${item.quantity}) - ₹${item.product.price * item.quantity}`).join('\n') +
+    `\n\n*Subtotal:* ₹${subtotal}` +
+    (discountAmount > 0 ? `\n*Discount (${appliedCoupon?.code}):* -₹${discountAmount}` : '') +
+    `\n*Shipping:* ${shippingCost === 0 ? 'FREE' : `₹${shippingCost}`}` +
+    `\n*Total Amount:* ₹${total}\n\nPlease confirm order and payment instructions.`
+  );
 
   return (
     <div className="fixed inset-0 z-50 overflow-hidden">
@@ -255,17 +265,30 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 </div>
               </div>
 
-              {/* Checkout CTA */}
-              <button
-                onClick={() => {
-                  setIsCartOpen(false);
-                  onProceedToCheckout();
-                }}
-                className="w-full py-3.5 bg-gold-gradient text-royal-950 font-bold text-xs uppercase tracking-widest rounded-xl hover:opacity-95 shadow-lg transition-all flex items-center justify-center gap-2"
-              >
-                <span>Proceed to Secure Checkout</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
+              {/* DUAL CHECKOUT CTAs */}
+              <div className="space-y-2">
+                <button
+                  onClick={() => {
+                    setIsCartOpen(false);
+                    onProceedToCheckout();
+                  }}
+                  className="w-full py-3.5 bg-gold-gradient text-royal-950 font-bold text-xs uppercase tracking-widest rounded-xl hover:opacity-95 shadow-lg transition-all flex items-center justify-center gap-2"
+                >
+                  <span>Proceed to Secure Checkout</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+
+                {/* WhatsApp Buy Box / Order on WhatsApp */}
+                <a
+                  href={`https://wa.me/917600917948?text=${whatsappCartMessage}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-full py-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow transition-colors flex items-center justify-center gap-2"
+                >
+                  <MessageCircle className="w-4 h-4 fill-white" />
+                  <span>Order Entire Bag on WhatsApp</span>
+                </a>
+              </div>
 
               <p className="text-[10px] text-center text-slate-500">
                 🔒 100% Encrypted &amp; Secure Checkout powered by Razorpay

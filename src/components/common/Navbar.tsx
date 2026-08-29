@@ -10,9 +10,7 @@ import {
   Sparkles, 
   MapPin, 
   Truck, 
-  User, 
-  Clock,
-  ShieldCheck
+  User
 } from 'lucide-react';
 import { useCart } from '../../context/CartContext';
 import { useWishlist } from '../../context/WishlistContext';
@@ -55,7 +53,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     { label: 'Lehenga & Chaniya Choli', view: 'shop', param: 'Lehenga' },
     { label: 'Designer Gowns', view: 'shop', param: 'Gowns' },
     { label: 'Sharara & Palazzo', view: 'shop', param: 'Sharara' },
-    { label: 'Nayra Cut', view: 'shop', param: 'Nayracut' },
+    { label: 'Nayra Cut', view: 'shop', param: 'Nayra Cut' },
     { label: 'Plus Size', view: 'shop', param: 'Plus Size' },
     { label: 'Track Order', view: 'track' }
   ];
@@ -81,18 +79,19 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
 
         <div className="hidden lg:flex items-center gap-4 text-[11px]">
+          {/* USER SPECIFIED: Book a Call Now */}
           <button 
             onClick={onOpenBookStylist} 
-            className="hover:text-gold-300 transition-colors flex items-center gap-1"
+            className="hover:text-gold-300 transition-colors flex items-center gap-1 font-bold text-gold-300 bg-white/10 px-2.5 py-0.5 rounded-full border border-gold-400/30"
           >
-            <Clock className="w-3.5 h-3.5 text-gold-400" /> Book Stylist Video Call
+            <Phone className="w-3.5 h-3.5 text-gold-400" /> Book a Call Now
           </button>
           
           <button 
             onClick={onOpenStoreLocator} 
             className="hover:text-gold-300 transition-colors flex items-center gap-1"
           >
-            <MapPin className="w-3.5 h-3.5 text-gold-400" /> Visit Gurukul Store
+            <MapPin className="w-3.5 h-3.5 text-gold-400" /> Visit Gurukul Flagship Store
           </button>
 
           {/* Currency Switcher */}
@@ -267,7 +266,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <div className="p-4 bg-[#1b2a4a] text-white flex justify-between items-center border-b border-gold-500/30">
                 <div className="flex flex-col">
                   <span className="font-display text-lg tracking-widest text-gold-200">AANAL GURUKUL</span>
-                  <span className="text-[10px] text-slate-300">Ahmedabad Designer Boutique</span>
+                  <span className="text-[10px] text-slate-300">Ahmedabad Flagship Store</span>
                 </div>
                 <button 
                   onClick={() => setMobileMenuOpen(false)}
@@ -297,6 +296,19 @@ export const Navbar: React.FC<NavbarProps> = ({
 
               {/* Navigation links */}
               <div className="py-2">
+                <button
+                  onClick={() => {
+                    onOpenBookStylist();
+                    setMobileMenuOpen(false);
+                  }}
+                  className="w-full text-left px-5 py-3 text-xs font-bold text-royal-900 bg-gold-50 hover:bg-gold-100 border-b border-gold-200 flex items-center justify-between"
+                >
+                  <span className="flex items-center gap-2">
+                    <Phone className="w-4 h-4 text-gold-600" /> Book a Call Now
+                  </span>
+                  <span className="text-gold-600 text-xs">&rarr;</span>
+                </button>
+
                 {navLinks.map((link) => (
                   <button
                     key={link.label}
@@ -339,8 +351,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             {/* Bottom Quick Help */}
             <div className="p-4 bg-[#fbf9f4] border-t border-gold-200">
-              <p className="text-xs text-royal-900 font-semibold mb-1">Aanal Gurukul Store, Ahmedabad</p>
-              <p className="text-[11px] text-slate-600 mb-3">Shantam Complex, Gurukul Road</p>
+              <p className="text-xs text-royal-900 font-semibold mb-1">Aanal Gurukul Flagship Store</p>
+              <p className="text-[11px] text-slate-600 mb-3">Shantam Complex, Gurukul Road, Ahmedabad</p>
               <a 
                 href="https://wa.me/917600917948?text=Hello%20Aanal%20Gurukul%2C%20I%20am%20interested%20in%20your%20designer%20collection." 
                 target="_blank" 

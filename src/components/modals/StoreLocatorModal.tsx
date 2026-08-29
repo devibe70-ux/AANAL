@@ -20,7 +20,7 @@ export const StoreLocatorModal: React.FC<StoreLocatorModalProps> = ({ isOpen, on
               <MapPin className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="font-serif text-lg font-bold">Flagship Boutique in Ahmedabad</h3>
+              <h3 className="font-serif text-lg font-bold">Flagship Store in Ahmedabad</h3>
               <p className="text-xs text-slate-300">Aanal Gurukul Experience Center</p>
             </div>
           </div>
@@ -33,7 +33,7 @@ export const StoreLocatorModal: React.FC<StoreLocatorModalProps> = ({ isOpen, on
           
           {/* Store Info */}
           <div className="bg-[#faf7f2] p-5 rounded-2xl border border-gold-200 space-y-3">
-            <h4 className="font-serif font-bold text-base text-royal-950">Aanal Gurukul Store</h4>
+            <h4 className="font-serif font-bold text-base text-royal-950">Aanal Gurukul Flagship Store</h4>
             <p className="text-xs text-slate-700 leading-relaxed">
               G4, Nr. Sunset Shantam Complex, Gurukul Road, Avani Row House, Ahmedabad, Gujarat 380052 India
             </p>

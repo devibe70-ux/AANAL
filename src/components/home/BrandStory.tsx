@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Sparkles, Scissors, Clock, ShieldCheck } from 'lucide-react';
+import { MapPin, Sparkles, Phone } from 'lucide-react';
 
 interface BrandStoryProps {
   onOpenStoreLocator: () => void;
@@ -46,13 +46,13 @@ export const BrandStory: React.FC<BrandStoryProps> = ({ onOpenStoreLocator, onOp
                 onClick={onOpenStoreLocator}
                 className="px-6 py-3 bg-gold-gradient text-royal-950 font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg hover:opacity-90 transition-opacity flex items-center gap-2"
               >
-                <MapPin className="w-4 h-4" /> Visit Ahmedabad Store
+                <MapPin className="w-4 h-4" /> Visit Ahmedabad Flagship Store
               </button>
               <button
                 onClick={onOpenBookStylist}
                 className="px-6 py-3 bg-white/10 hover:bg-white/20 text-gold-200 border border-gold-500/30 font-semibold text-xs uppercase tracking-wider rounded-xl transition-colors flex items-center gap-2"
               >
-                <Clock className="w-4 h-4 text-gold-400" /> Book Video Styling Call
+                <Phone className="w-4 h-4 text-gold-400" /> Book a Call Now
               </button>
             </div>
 
@@ -63,7 +63,7 @@ export const BrandStory: React.FC<BrandStoryProps> = ({ onOpenStoreLocator, onOp
             <div className="aspect-[4/3] rounded-3xl overflow-hidden border-2 border-gold-500/40 shadow-2xl">
               <img
                 src="https://aanalgurukul.com/wp-content/uploads/2026/07/Picsart_26-07-07_23-50-08-307.jpg-scaled.jpeg"
-                alt="Aanal Gurukul Ahmedabad Boutique"
+                alt="Aanal Gurukul Ahmedabad Flagship Store"
                 className="w-full h-full object-cover object-top"
               />
             </div>

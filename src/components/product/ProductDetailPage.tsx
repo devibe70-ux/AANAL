@@ -7,10 +7,8 @@ import {
   ShieldCheck, 
   Star, 
   Check, 
-  Share2, 
   Phone, 
-  Clock, 
-  ChevronRight, 
+  MessageCircle,
   ArrowLeft,
   Sparkles
 } from 'lucide-react';
@@ -59,6 +57,18 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
     setAddedAnimation(true);
     setTimeout(() => setAddedAnimation(false), 2000);
   };
+
+  const whatsappBuyMessage = encodeURIComponent(
+    `Hello Aanal Gurukul! I would like to buy this ensemble directly:\n\n` +
+    `*Outfit:* ${product.title}\n` +
+    `*SKU:* ${product.sku}\n` +
+    `*Price:* ₹${product.price}\n` +
+    `*Size:* ${selectedSize}\n` +
+    `*Color:* ${selectedColor}\n` +
+    `*Stitching:* ${stitchingOption === 'custom-stitched' ? 'Custom Made-to-Measure Fit' : 'Standard Ready-to-Wear'}\n` +
+    (customMeasurements ? `*Measurements:* Bust: ${customMeasurements.bust}", Waist: ${customMeasurements.waist}", Hips: ${customMeasurements.hips}", Height: ${customMeasurements.height}\n` : '') +
+    `\nPlease confirm order and payment instructions.`
+  );
 
   const relatedProducts = allProducts
     .filter((p) => p.id !== product.id && p.categories.some((c) => product.categories.includes(c)))
@@ -278,25 +288,38 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                   </div>
                 )}
 
-                {/* Actions: Add to Cart + WhatsApp Stylist */}
+                {/* DUAL ACTION BUTTONS: Add to Cart + WhatsApp Buy Box */}
                 <div className="mt-8 space-y-3">
-                  <button
-                    onClick={handleAddToCart}
-                    className="w-full py-4 bg-gold-gradient text-royal-950 font-bold text-sm uppercase tracking-widest rounded-2xl hover:opacity-95 shadow-xl transition-all flex items-center justify-center gap-2 transform active:scale-[0.99]"
-                  >
-                    <ShoppingBag className="w-5 h-5" />
-                    <span>{addedAnimation ? 'Added to Cart ✓' : 'Add to Royal Bag'}</span>
-                  </button>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {/* Add to Royal Bag */}
+                    <button
+                      onClick={handleAddToCart}
+                      className="w-full py-4 bg-[#1b2a4a] hover:bg-royal-800 text-gold-300 font-bold text-xs uppercase tracking-widest rounded-2xl shadow-lg transition-all flex items-center justify-center gap-2 border border-gold-500/30 transform active:scale-[0.99]"
+                    >
+                      <ShoppingBag className="w-4 h-4" />
+                      <span>{addedAnimation ? 'Added to Bag ✓' : 'Add to Royal Bag'}</span>
+                    </button>
 
-                  <a
-                    href={`https://wa.me/917600917948?text=Hello%20Aanal%20Gurukul%2C%20I%20am%20interested%20in%20ordering%20"${encodeURIComponent(product.title)}"%20(SKU%3A%20${product.sku}).`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="w-full py-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold text-xs rounded-2xl transition-colors flex items-center justify-center gap-2 shadow"
+                    {/* WhatsApp Buy Box Button */}
+                    <a
+                      href={`https://wa.me/917600917948?text=${whatsappBuyMessage}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="w-full py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-xs uppercase tracking-widest rounded-2xl shadow-lg transition-all flex items-center justify-center gap-2 transform active:scale-[0.99]"
+                    >
+                      <MessageCircle className="w-5 h-5 fill-white" />
+                      <span>Buy on WhatsApp</span>
+                    </a>
+                  </div>
+
+                  {/* Book a Call Now option */}
+                  <button
+                    onClick={onOpenBookStylist}
+                    className="w-full py-2.5 bg-gold-50 hover:bg-gold-100 text-royal-900 font-semibold text-xs rounded-xl border border-gold-200 transition-colors flex items-center justify-center gap-2"
                   >
-                    <Phone className="w-4 h-4" />
-                    <span>Order / Consult with Stylist on WhatsApp</span>
-                  </a>
+                    <Phone className="w-3.5 h-3.5 text-gold-600" />
+                    <span>Have questions? Book a Call Now with our Stylist</span>
+                  </button>
                 </div>
 
               </div>
@@ -363,7 +386,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
             </div>
 
             <div className="mt-6 text-xs text-slate-600 leading-relaxed">
-              <h4 className="font-serif font-bold text-sm text-royal-900 mb-2">Artisan Notes &amp; Brand Heritage</h4>
+              <h4 className="font-serif font-bold text-sm text-royal-900 mb-2">Artisan Notes &amp; Heritage</h4>
               <p>{product.description}</p>
             </div>
           </div>

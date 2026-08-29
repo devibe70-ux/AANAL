@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Sparkles, ArrowRight, ShieldCheck, Truck, Scissors, Clock } from 'lucide-react';
+import { Sparkles, ArrowRight, Phone } from 'lucide-react';
 
 interface HeroBannerProps {
   onExplore: (category?: string) => void;
@@ -83,12 +83,13 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ onExplore, onBookStylist
               <ArrowRight className="w-4 h-4" />
             </button>
 
+            {/* USER SPECIFIED: Book a Call Now */}
             <button
               onClick={onBookStylist}
               className="px-6 py-4 bg-white/10 hover:bg-white/20 text-gold-200 border border-gold-500/30 font-semibold text-xs uppercase tracking-wider rounded-full backdrop-blur-md transition-all flex items-center gap-2"
             >
-              <Clock className="w-4 h-4 text-gold-400" />
-              <span>Book Virtual Stylist</span>
+              <Phone className="w-4 h-4 text-gold-400" />
+              <span>Book a Call Now</span>
             </button>
           </div>
 

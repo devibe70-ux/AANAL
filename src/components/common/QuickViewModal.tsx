@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { X, Heart, ShoppingBag, Scissors, Star, Sparkles, ArrowRight } from 'lucide-react';
+import { X, ShoppingBag, ArrowRight, MessageCircle } from 'lucide-react';
 import { Product } from '../../types/ecommerce';
 import { useCart } from '../../context/CartContext';
-import { useWishlist } from '../../context/WishlistContext';
 import { useCurrency } from '../../context/CurrencyContext';
 
 interface QuickViewModalProps {
@@ -19,11 +18,14 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({
   onViewFullDetails
 }) => {
   const { addToCart } = useCart();
-  const { toggleWishlist, isInWishlist } = useWishlist();
   const { format } = useCurrency();
   const [selectedSize, setSelectedSize] = useState('M');
 
   if (!isOpen || !product) return null;
+
+  const whatsappMessage = encodeURIComponent(
+    `Hello Aanal Gurukul! I would like to buy "${product.title}" (Size: ${selectedSize}, Price: ₹${product.price}, SKU: ${product.sku}). Please confirm availability.`
+  );
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
@@ -95,15 +97,28 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({
             </div>
 
             <div className="space-y-2 pt-4 border-t border-slate-100">
-              <button
-                onClick={() => {
-                  addToCart(product, 1, selectedSize, product.colors[0], 'ready-to-wear');
-                  onClose();
-                }}
-                className="w-full py-3 bg-gold-gradient text-royal-950 font-bold text-xs uppercase tracking-wider rounded-xl shadow hover:opacity-90 flex items-center justify-center gap-2"
-              >
-                <ShoppingBag className="w-4 h-4" /> Add to Cart
-              </button>
+              <div className="grid grid-cols-2 gap-2">
+                {/* Add to Cart */}
+                <button
+                  onClick={() => {
+                    addToCart(product, 1, selectedSize, product.colors[0], 'ready-to-wear');
+                    onClose();
+                  }}
+                  className="py-3 bg-royal-900 text-gold-300 font-bold text-xs uppercase tracking-wider rounded-xl shadow hover:bg-gold-600 hover:text-royal-950 transition-colors flex items-center justify-center gap-1.5"
+                >
+                  <ShoppingBag className="w-4 h-4" /> Add to Cart
+                </button>
+
+                {/* WhatsApp Buy Box */}
+                <a
+                  href={`https://wa.me/917600917948?text=${whatsappMessage}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="py-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow flex items-center justify-center gap-1.5"
+                >
+                  <MessageCircle className="w-4 h-4 fill-white" /> Buy on WA
+                </a>
+              </div>
 
               <button
                 onClick={() => {
