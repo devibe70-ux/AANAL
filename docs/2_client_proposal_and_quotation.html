@@ -2,135 +2,154 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document 2: Commercial Quotation & Proposal - Aanal Gurukul</title>
+  <title>Website Quotation & Proposal - Aanal Gurukul</title>
   <style>
-  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap');
-  
-  :root {
-    --gold: #c58f27;
-    --royal: #1b2a4a;
-    --dark: #101c33;
-    --light-gold: #fbf9f4;
-    --border: #e6dfd1;
-  }
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap');
+    
+    :root {
+      --gold: #c58f27;
+      --royal: #1b2a4a;
+      --border: #e6dfd1;
+      --green: #0a7042;
+    }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    color: #222;
-    background-color: #f8f6f2;
-    margin: 0;
-    padding: 20px;
-    line-height: 1.6;
-  }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: #222;
+      background-color: #f8f6f2;
+      margin: 0;
+      padding: 30px;
+      line-height: 1.6;
+    }
 
-  .page-container {
-    max-width: 850px;
-    margin: 0 auto;
-    background: #ffffff;
-    padding: 40px 50px;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-    border: 1px solid var(--border);
-  }
+    .page-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 45px 55px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border: 1px solid var(--border);
+    }
 
-  h1, h2, h3, .font-serif {
-    font-family: 'Playfair Display', Georgia, serif;
-    color: var(--royal);
-  }
+    h1, h2, h3, .font-serif {
+      font-family: 'Playfair Display', Georgia, serif;
+      color: var(--royal);
+    }
 
-  .font-display {
-    font-family: 'Cinzel', serif;
-    letter-spacing: 0.15em;
-  }
+    .font-display {
+      font-family: 'Cinzel', serif;
+      letter-spacing: 0.15em;
+    }
 
-  .badge {
-    display: inline-block;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      background: #fdf6e7;
+      color: #976508;
+      border: 1px solid #e8c87f;
+    }
 
-  .badge-gold {
-    background: #fdf6e7;
-    color: #976508;
-    border: 1px solid #e8c87f;
-  }
+    .callout {
+      background: #faf7f2;
+      border-left: 4px solid var(--gold);
+      padding: 16px 20px;
+      margin: 20px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 13px;
+      color: #444;
+    }
 
-  .badge-royal {
-    background: #eef2f9;
-    color: #1b2a4a;
-    border: 1px solid #cbd6e8;
-  }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 13px;
+    }
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 13px;
-  }
+    th {
+      background: #fbf9f5;
+      color: var(--royal);
+      text-align: left;
+      padding: 12px 14px;
+      font-weight: 700;
+      border-bottom: 2px solid var(--border);
+    }
 
-  th {
-    background: #fbf9f5;
-    color: var(--royal);
-    text-align: left;
-    padding: 12px 14px;
-    font-weight: 700;
-    border-bottom: 2px solid var(--border);
-  }
+    td {
+      padding: 14px;
+      border-bottom: 1px solid #eee;
+      vertical-align: top;
+    }
 
-  td {
-    padding: 12px 14px;
-    border-bottom: 1px solid #eee;
-  }
+    .text-right { text-align: right; }
 
-  .text-right { text-align: right; }
-  .text-center { text-align: center; }
+    .feature-list {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 12px;
+      color: #444;
+      line-height: 1.8;
+    }
 
-  .summary-card {
-    background: #fbf9f5;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 20px;
-    margin: 20px 0;
-  }
+    .extra-box {
+      background: #fdfbf7;
+      border: 1px dashed #d8caa7;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-top: 20px;
+    }
 
-  .print-btn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: var(--royal);
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .print-btn:hover { background: var(--gold); }
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 15px;
+    }
 
-  @media print {
-    body { background: #fff; padding: 0; }
-    .page-container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
-    .print-btn { display: none; }
-  }
-</style>
+    .benefit-card {
+      background: #fbf9f5;
+      border: 1px solid var(--border);
+      padding: 14px;
+      border-radius: 10px;
+      font-size: 12px;
+    }
+
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--royal);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .print-btn:hover { background: var(--gold); }
+
+    @media print {
+      body { background: #fff; padding: 0; }
+      .page-container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+      .print-btn { display: none; }
+    }
+  </style>
 </head>
 <body>
-  <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  <button class="print-btn" onclick="window.print()">🖨️ Print Proposal</button>
 
   <div class="page-container">
-    <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid var(--border); padding-bottom: 20px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid var(--border); padding-bottom: 18px;">
       <div>
-        <span class="badge badge-gold">EXCLUSIVELY PREPARED FOR</span>
-        <h1 style="font-size: 26px; margin: 10px 0 4px 0;">Aanal Gurukul Flagship Store</h1>
-        <p style="font-size: 12px; color: #666; margin: 0;">G4, Shantam Complex, Gurukul Road, Ahmedabad, Gujarat 380052</p>
+        <span class="badge">SIMPLE PROPOSAL &bull; 14-DAY TRIAL</span>
+        <h1 style="font-size: 26px; margin: 8px 0 4px 0;">New Online Store for Aanal Gurukul</h1>
+        <p style="font-size: 12px; color: #666; margin: 0;">G4 Shantam Complex, Gurukul Road, Ahmedabad</p>
       </div>
       <div class="text-right">
         <span class="font-display" style="font-size: 20px; font-weight: 700; color: var(--royal);">AANAL</span><br>
@@ -138,104 +157,128 @@
       </div>
     </div>
 
-    <div style="background: #faf7f2; border-left: 4px solid var(--gold); padding: 15px 20px; margin: 25px 0; border-radius: 0 8px 8px 0;">
-      <p style="margin: 0; font-size: 13px; color: #444;">
-        <strong>Project Overview:</strong> Launching a modern, high-speed luxury e-commerce platform for Aanal Gurukul with integrated 1-Click WhatsApp Buying, Razorpay &amp; UPI Payment Gateway, Custom Tailoring Measurement Forms, Multi-Currency NRI conversion, and automated GST billing.
-      </p>
+    <div class="callout">
+      <strong>How this helps your store:</strong> We have built a ready-made, beautiful mobile website for your boutique. Customers can browse your latest bridal lehengas, gowns, and suits on their phone, order directly on your WhatsApp with 1 tap, or pay online with UPI/GPay/Card.
     </div>
 
-    <h3 style="margin-top: 25px;">Live Interactive Preview (14-Day Test Trial)</h3>
-    <p style="font-size: 13px; color: #555;">
-      Your store website is already designed and live for your evaluation at: <br>
-      <a href="https://devibe70-ux.github.io/AANAL/" target="_blank" style="color: var(--royal); font-weight: bold; text-decoration: underline;">https://devibe70-ux.github.io/AANAL/</a>
+    <p style="font-size: 13px; color: #444;">
+      <strong>👉 See your live website right now on your phone:</strong> <br>
+      <a href="https://devibe70-ux.github.io/AANAL/" target="_blank" style="color: var(--royal); font-weight: bold; text-decoration: underline; font-size: 14px;">
+        https://devibe70-ux.github.io/AANAL/
+      </a>
+      <span style="display:block; font-size: 11px; color:#777; margin-top:2px;">(Free 14-Day evaluation preview &bull; Zero commitment)</span>
     </p>
 
-    <h3 style="margin-top: 30px;">Package Options &amp; Investment Quotation</h3>
+    <h3 style="margin-top: 25px; font-size: 17px;">Choose Your Plan</h3>
     <table>
       <thead>
         <tr>
-          <th style="width: 25%;">Package</th>
-          <th style="width: 45%;">Included Capabilities</th>
-          <th class="text-right" style="width: 30%;">Investment</th>
+          <th style="width: 28%;">Plan Name</th>
+          <th style="width: 47%;">What You Get (Features)</th>
+          <th class="text-right" style="width: 25%;">One-Time Cost</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>
-            <strong style="color: var(--royal); font-size: 14px;">1. Starter Digital Store</strong><br>
-            <span style="font-size: 11px; color: #777;">WhatsApp Commerce</span>
+            <strong style="font-size: 14px; color: var(--royal);">1. Starter Plan</strong><br>
+            <span style="font-size: 11px; color: #777;">WhatsApp Store</span>
           </td>
-          <td style="font-size: 12px;">
-            &bull; Mobile-Optimized Luxury Storefront<br>
-            &bull; Up to 30 Catalog Products with Size Selectors<br>
-            &bull; <strong>1-Click WhatsApp Direct Buy Box</strong><br>
-            &bull; Flagship Store Locator &amp; Google Map<br>
-            &bull; High-Speed Cloud Hosting &amp; SSL Padlock
+          <td>
+            <ul class="feature-list">
+              <li>Works smoothly on all smartphones &amp; laptops.</li>
+              <li>Up to 30 outfits uploaded with photos and prices.</li>
+              <li><strong>1-Tap "Buy on WhatsApp" Button:</strong> Customer taps and sends the exact dress photo, size, and price directly to your WhatsApp.</li>
+              <li>Store address &amp; Google Map location button.</li>
+              <li>Fast loading speed &amp; secure website lock.</li>
+            </ul>
           </td>
           <td class="text-right">
             <span style="font-size: 16px; font-weight: 700; color: var(--royal);">₹20,000</span><br>
-            <small style="color: #666;">One-Time Setup</small>
+            <small style="color: #777;">One-Time</small>
           </td>
         </tr>
+
         <tr style="background: #fdfbf7;">
           <td>
-            <span class="badge badge-gold" style="margin-bottom: 4px;">MOST POPULAR ⭐</span><br>
-            <strong style="color: var(--royal); font-size: 15px;">2. Growth E-Commerce</strong><br>
-            <span style="font-size: 11px; color: #777;">Full Online Payments</span>
+            <span class="badge" style="margin-bottom: 4px;">MOST POPULAR ⭐</span><br>
+            <strong style="font-size: 15px; color: var(--royal);">2. Growth Plan</strong><br>
+            <span style="font-size: 11px; color: #777;">Complete Online Store</span>
           </td>
-          <td style="font-size: 12px;">
-            &bull; <strong>Everything in Starter, plus:</strong><br>
-            &bull; <strong>Razorpay, UPI QR (GPay/PhonePe), Card &amp; COD Gateway</strong><br>
-            &bull; <strong>Custom Made-to-Measure Tailoring Form</strong><br>
-            &bull; <strong>Live Order Timeline Tracking</strong> (Dispatched &bull; Delivered)<br>
-            &bull; <strong>Automated GST Tax Invoice Generator</strong><br>
-            &bull; Discount Promo Engine (<code>AANAL10</code>, <code>FESTIVE15</code>)<br>
-            &bull; Google Merchant Center Shopping Feed
+          <td>
+            <ul class="feature-list">
+              <li><strong>Everything in Starter Plan, plus:</strong></li>
+              <li><strong>Online Payment Gateway:</strong> Accept UPI (GPay, PhonePe, Paytm), Cards, NetBanking &amp; Cash on Delivery (COD).</li>
+              <li><strong>Custom Tailoring Measurement Form:</strong> Customers can give their exact bust, waist, hips, and height measurements online so fitting is 100% perfect.</li>
+              <li><strong>Live Order Tracking:</strong> Customer can see order status (Stitching &rarr; Ready &rarr; Dispatched).</li>
+              <li><strong>Automatic Bill / GST Invoice:</strong> Downloadable bill generated automatically for each order.</li>
+              <li>Discount coupon codes (e.g. <code>DIWALI10</code>).</li>
+            </ul>
           </td>
           <td class="text-right">
-            <span style="font-size: 18px; font-weight: 700; color: #0a7042;">₹35,000</span><br>
-            <small style="color: #666;">+ ₹2,500/mo Maintenance &amp; Updates</small>
+            <span style="font-size: 18px; font-weight: 700; color: var(--green);">₹35,000</span><br>
+            <small style="color: #777;">+ ₹2,500/mo maintenance</small>
           </td>
         </tr>
+
         <tr>
           <td>
-            <strong style="color: var(--royal); font-size: 14px;">3. Luxury NRI Enterprise</strong><br>
-            <span style="font-size: 11px; color: #777;">Global Bridal Couture</span>
+            <strong style="font-size: 14px; color: var(--royal);">3. Luxury NRI Plan</strong><br>
+            <span style="font-size: 11px; color: #777;">For Worldwide &amp; NRI Clients</span>
           </td>
-          <td style="font-size: 12px;">
-            &bull; <strong>Everything in Growth, plus:</strong><br>
-            &bull; <strong>Multi-Currency Global Switcher</strong> (USD, GBP, AED, CAD)<br>
-            &bull; <strong>Book a Call Now</strong> Virtual Stylist Video Scheduler<br>
-            &bull; Unlimited Product Catalog Updates (100+ SKUs)<br>
-            &bull; Festive season priority banner campaigns (Navratri, Diwali)
+          <td>
+            <ul class="feature-list">
+              <li><strong>Everything in Growth Plan, plus:</strong></li>
+              <li><strong>Automatic Multi-Currency:</strong> Converts prices automatically to Dollars ($), Pounds (£), Dirhams (AED), and Canadian Dollars for NRI clients in USA, UK, Dubai.</li>
+              <li><strong>"Book a Call Now" Button:</strong> Clients can book video call appointments with your stylist.</li>
+              <li>Google Shopping integration (your dresses show up on Google search).</li>
+              <li>Festive season banner updates (Navratri, Diwali, Wedding season).</li>
+            </ul>
           </td>
           <td class="text-right">
-            <span style="font-size: 16px; font-weight: 700; color: var(--royal);">₹55,000</span><br>
-            <small style="color: #666;">+ ₹4,000/mo Retainer</small>
+            <span style="font-size: 17px; font-weight: 700; color: var(--royal);">₹45,000</span><br>
+            <small style="color: #777;">+ ₹3,500/mo maintenance</small>
           </td>
         </tr>
       </tbody>
     </table>
 
-    <h3 style="margin-top: 30px;">Why Aanal Gurukul Wins with this Website</h3>
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 12px; margin-top: 10px;">
-      <div style="background:#fbf9f5; padding:12px; border-radius:8px; border:1px solid var(--border);">
-        <strong>💰 Save 25% – 35% Marketplace Commission:</strong> Unlike Amazon or Myntra that deduct 30% per order, keep 100% of profits from direct customer sales.
-      </div>
-      <div style="background:#fbf9f5; padding:12px; border-radius:8px; border:1px solid var(--border);">
-        <strong>🌍 Capture High-Ticket NRI Clients:</strong> Gujarati brides in the USA, UK, and UAE can browse in their local currency and place custom stitching orders directly.
-      </div>
-      <div style="background:#fbf9f5; padding:12px; border-radius:8px; border:1px solid var(--border);">
-        <strong>⚡ 1-Click WhatsApp Shopping:</strong> Customers tap "Buy on WhatsApp" and the exact lehenga name, price, and selected size appear in your store chat.
-      </div>
-      <div style="background:#fbf9f5; padding:12px; border-radius:8px; border:1px solid var(--border);">
-        <strong>✂️ Zero Fitting Returns:</strong> Custom measurement inputs (Bust, Waist, Hips, Height) guarantee tailor-accurate fits before dispatch.
+    <!-- Extra Product Upload Pricing -->
+    <div class="extra-box">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <strong style="color: var(--royal); font-size: 13px;">📸 Adding More Outfits / Products Later:</strong>
+          <p style="margin: 3px 0 0 0; font-size: 12px; color: #555;">
+            Whenever you get new stock, send us the photos and prices. We will format the photos, write descriptions, add size options, and upload them for you.
+          </p>
+        </div>
+        <div class="text-right" style="min-width: 170px;">
+          <span style="font-size: 16px; font-weight: 700; color: var(--royal); font-family: monospace;">₹2,300</span>
+          <span style="display: block; font-size: 11px; color: #666;">for every 100 products</span>
+        </div>
       </div>
     </div>
 
-    <div style="margin-top: 35px; border-top: 1px solid var(--border); padding-top: 20px; font-size: 11px; color: #888; display: flex; justify-content: space-between;">
+    <!-- Why this makes you money -->
+    <h3 style="margin-top: 25px; font-size: 17px;">Why This Is Great For Aanal Gurukul</h3>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <strong style="color: var(--royal);">💰 0% Commission (Save 30%):</strong> Selling on Myntra or Amazon cuts 25% to 35% commission on every lehenga. On your own site, 100% of the money goes directly to your bank account.
+      </div>
+      <div class="benefit-card">
+        <strong style="color: var(--royal);">📲 WhatsApp Easy Orders:</strong> Customers don't need to fill complicated forms. 1 tap opens WhatsApp with the exact dress photo, selected size, and price.
+      </div>
+      <div class="benefit-card">
+        <strong style="color: var(--royal);">👗 Zero Size Returns:</strong> The custom measurement box allows buyers to type their exact body measurements so the blouse and lehenga fit perfectly on arrival.
+      </div>
+      <div class="benefit-card">
+        <strong style="color: var(--royal);">✈️ High-Value NRI Sales:</strong> Gujarati families living in the USA, UK, and Dubai can browse in Dollars/Pounds and order bridal lehengas easily.
+      </div>
+    </div>
+
+    <div style="margin-top: 30px; border-top: 1px solid var(--border); padding-top: 15px; font-size: 11px; color: #888; display: flex; justify-content: space-between;">
       <span>Prepared for: Owner, Aanal Gurukul</span>
-      <span>Validity: 14 Days from Meeting</span>
+      <span>14-Day Free Trial Active</span>
     </div>
   </div>
 </body>
