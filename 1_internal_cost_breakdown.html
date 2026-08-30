@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document 1: Internal Cost & Expense Breakdown</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap');
+  
+  :root {
+    --gold: #c58f27;
+    --royal: #1b2a4a;
+    --dark: #101c33;
+    --light-gold: #fbf9f4;
+    --border: #e6dfd1;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: #222;
+    background-color: #f8f6f2;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+  }
+
+  .page-container {
+    max-width: 850px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 40px 50px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border: 1px solid var(--border);
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--royal);
+  }
+
+  .font-display {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.15em;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .badge-gold {
+    background: #fdf6e7;
+    color: #976508;
+    border: 1px solid #e8c87f;
+  }
+
+  .badge-royal {
+    background: #eef2f9;
+    color: #1b2a4a;
+    border: 1px solid #cbd6e8;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 13px;
+  }
+
+  th {
+    background: #fbf9f5;
+    color: var(--royal);
+    text-align: left;
+    padding: 12px 14px;
+    font-weight: 700;
+    border-bottom: 2px solid var(--border);
+  }
+
+  td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .text-right { text-align: right; }
+  .text-center { text-align: center; }
+
+  .summary-card {
+    background: #fbf9f5;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  .print-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--royal);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .print-btn:hover { background: var(--gold); }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page-container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+    .print-btn { display: none; }
+  }
+</style>
+</head>
+<body>
+  <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+
+  <div class="page-container">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid var(--border); padding-bottom: 20px;">
+      <div>
+        <span class="badge badge-royal">CONFIDENTIAL &bull; INTERNAL DEVELOPER USE ONLY</span>
+        <h1 style="font-size: 26px; margin: 10px 0 4px 0;">Cost to Launch: Aanal Gurukul E-Commerce</h1>
+        <p style="font-size: 12px; color: #666; margin: 0;">Detailed Infrastructure, Tooling &amp; Operating Cost Analysis</p>
+      </div>
+      <div class="text-right">
+        <span class="font-display" style="font-size: 18px; font-weight: 700; color: var(--royal);">AANAL</span><br>
+        <span style="font-size: 11px; color: #888;">GURUKUL PROJECT</span>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 30px;">1. Direct Infrastructure &amp; Tooling Costs</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th>Provider</th>
+          <th>Plan / Specs</th>
+          <th>Upfront Cost</th>
+          <th class="text-right">Ongoing Cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Custom Domain Name</strong></td>
+          <td>GoDaddy / Namecheap</td>
+          <td><code>.com</code> or <code>.in</code> registration (1 year)</td>
+          <td>₹499 – ₹999</td>
+          <td class="text-right">₹899 – ₹1,199 / yr</td>
+        </tr>
+        <tr>
+          <td><strong>Website Hosting &amp; CDN</strong></td>
+          <td>Vercel (Hobby Tier)</td>
+          <td>Global Edge Network, 100GB Bandwidth, DDoS Shield</td>
+          <td><strong>₹0.00</strong></td>
+          <td class="text-right"><strong>₹0.00 / mo</strong></td>
+        </tr>
+        <tr>
+          <td><strong>SSL Security Certificate</strong></td>
+          <td>Let's Encrypt / Cloudflare</td>
+          <td>Automatic 256-bit SSL padlock (<code>https://</code>)</td>
+          <td><strong>₹0.00</strong></td>
+          <td class="text-right"><strong>₹0.00 / mo</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Payment Gateway (Razorpay/UPI)</strong></td>
+          <td>Razorpay India</td>
+          <td>Merchant standard gateway (Cards, UPI, Netbanking)</td>
+          <td><strong>₹0.00</strong> setup</td>
+          <td class="text-right">2% per transaction<br><small style="color:#777;">(Paid by client's bank account)</small></td>
+        </tr>
+        <tr>
+          <td><strong>WhatsApp Direct Commerce</strong></td>
+          <td>WhatsApp Universal Deep-links</td>
+          <td>Unlimited 1-click cart &amp; product order routing</td>
+          <td><strong>₹0.00</strong></td>
+          <td class="text-right"><strong>₹0.00 / mo</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Google Merchant XML Feed</strong></td>
+          <td>Self-Generated RSS 2.0</td>
+          <td>Standardized Google Shopping sync endpoint</td>
+          <td><strong>₹0.00</strong></td>
+          <td class="text-right"><strong>₹0.00 / mo</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="summary-card" style="display: flex; justify-content: space-between; align-items: center;">
+      <div>
+        <h4 style="margin: 0; color: var(--royal); font-size: 16px;">Total Out-of-Pocket Expense to Launch:</h4>
+        <p style="margin: 4px 0 0 0; font-size: 12px; color: #666;">Domain registration is your ONLY fixed capital expense.</p>
+      </div>
+      <div class="text-right">
+        <span style="font-family: monospace; font-size: 24px; font-weight: 700; color: #0a7042;">₹499 – ₹999</span>
+        <span style="display: block; font-size: 10px; color: #888;">(One-Time Year 1)</span>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 30px;">2. Profit Margin &amp; Return Analysis</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Client Pricing Option</th>
+          <th>You Bill Client</th>
+          <th>Your Actual Cost</th>
+          <th class="text-right">Your Net Profit</th>
+          <th class="text-right">Profit Margin</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Tier 1: Starter Digital Store</strong></td>
+          <td>₹20,000</td>
+          <td>~₹999</td>
+          <td class="text-right" style="font-weight:700; color:#0a7042;">₹19,001</td>
+          <td class="text-right" style="font-weight:700;">95.0%</td>
+        </tr>
+        <tr>
+          <td><strong>Tier 2: Growth E-Commerce (Target)</strong></td>
+          <td>₹35,000 + ₹2,500/mo</td>
+          <td>~₹999</td>
+          <td class="text-right" style="font-weight:700; color:#0a7042;">₹34,001 + ₹30,000/yr</td>
+          <td class="text-right" style="font-weight:700;">97.1%</td>
+        </tr>
+        <tr>
+          <td><strong>Tier 3: Luxury Bridal Enterprise</strong></td>
+          <td>₹55,000 + ₹4,000/mo</td>
+          <td>~₹999</td>
+          <td class="text-right" style="font-weight:700; color:#0a7042;">₹54,001 + ₹48,000/yr</td>
+          <td class="text-right" style="font-weight:700;">98.1%</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top: 30px;">3. Key Recommendations for Domain &amp; Hosting Setup</h3>
+    <ul style="font-size: 13px; color: #444; padding-left: 20px;">
+      <li><strong>Domain Purchase:</strong> Buy the domain on GoDaddy or Namecheap under a dedicated business account. Uncheck all GoDaddy up-sells (no email hosting, no website builder, no paid SSL).</li>
+      <li><strong>Zero-Cost Vercel Hosting:</strong> Connect the GitHub repository directly to Vercel. Point GoDaddy's DNS A Record (<code>76.76.21.21</code>) and CNAME to Vercel. You will never receive a hosting invoice.</li>
+      <li><strong>14-Day Free Trial Strategy:</strong> The current preview is live on GitHub Pages at zero cost. If the client declines at Day 14, you have invested <strong>₹0.00</strong> in external fees.</li>
+    </ul>
+
+  </div>
+</body>
+</html>

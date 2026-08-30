@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document 3: Service Contract & Maintenance Agreement - Aanal Gurukul</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap');
+  
+  :root {
+    --gold: #c58f27;
+    --royal: #1b2a4a;
+    --dark: #101c33;
+    --light-gold: #fbf9f4;
+    --border: #e6dfd1;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: #222;
+    background-color: #f8f6f2;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+  }
+
+  .page-container {
+    max-width: 850px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 40px 50px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border: 1px solid var(--border);
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--royal);
+  }
+
+  .font-display {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.15em;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .badge-gold {
+    background: #fdf6e7;
+    color: #976508;
+    border: 1px solid #e8c87f;
+  }
+
+  .badge-royal {
+    background: #eef2f9;
+    color: #1b2a4a;
+    border: 1px solid #cbd6e8;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 13px;
+  }
+
+  th {
+    background: #fbf9f5;
+    color: var(--royal);
+    text-align: left;
+    padding: 12px 14px;
+    font-weight: 700;
+    border-bottom: 2px solid var(--border);
+  }
+
+  td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .text-right { text-align: right; }
+  .text-center { text-align: center; }
+
+  .summary-card {
+    background: #fbf9f5;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  .print-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--royal);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .print-btn:hover { background: var(--gold); }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page-container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+    .print-btn { display: none; }
+  }
+</style>
+</head>
+<body>
+  <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+
+  <div class="page-container">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid var(--border); padding-bottom: 20px;">
+      <div>
+        <span class="badge badge-royal">LEGAL SERVICE AGREEMENT</span>
+        <h1 style="font-size: 24px; margin: 10px 0 4px 0;">Website Development &amp; Maintenance Contract</h1>
+        <p style="font-size: 12px; color: #666; margin: 0;">Commercial Terms, Deliverables &amp; Post-Trial Retainer</p>
+      </div>
+      <div class="text-right">
+        <span style="font-family: monospace; font-size: 12px; font-weight: 700; color: var(--royal);">CONTRACT REF:</span><br>
+        <span style="font-family: monospace; font-size: 13px; color: var(--gold); font-weight: 700;">AG-DEV-2026-01</span>
+      </div>
+    </div>
+
+    <p style="font-size: 12px; color: #555; margin-top: 20px;">
+      This Agreement is entered into on <strong>August 30, 2026</strong> between <strong>Developer / Service Provider</strong> ("Developer") and <strong>Aanal Gurukul</strong>, having its flagship boutique at G4, Shantam Complex, Gurukul Road, Ahmedabad, Gujarat 380052 ("Client").
+    </p>
+
+    <h3 style="margin-top: 25px; font-size: 16px;">1. Scope of Work &amp; Deliverables</h3>
+    <ol style="font-size: 12px; color: #444; padding-left: 20px; line-height: 1.8;">
+      <li><strong>E-Commerce Platform:</strong> Deployment of the customized web application with responsive mobile/desktop user interface, product catalog, search filters, and shopping cart.</li>
+      <li><strong>Payment Gateways:</strong> Integration of Razorpay sandbox/live keys, Dynamic UPI QR Code, and Cash on Delivery (COD) workflows.</li>
+      <li><strong>WhatsApp Commerce:</strong> Direct 1-Click WhatsApp buy boxes linked to Client's official business phone number (<code>+91 76009 17948</code> / <code>+91 92748 54445</code>).</li>
+      <li><strong>Custom Stitching Module:</strong> Interactive measurement collection form for bespoke tailoring orders.</li>
+      <li><strong>Order Management &amp; Invoicing:</strong> Order tracker and downloadable GST tax invoices.</li>
+      <li><strong>Google Merchant XML Feed:</strong> Google Shopping RSS 2.0 product catalog sync feed.</li>
+    </ol>
+
+    <h3 style="margin-top: 25px; font-size: 16px;">2. Commercial Terms &amp; Payment Schedule</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Milestone</th>
+          <th>Deliverable</th>
+          <th class="text-right">Amount (INR)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Milestone 1: 14-Day Free Evaluation</strong></td>
+          <td>Access to full live test website on temporary preview domain</td>
+          <td class="text-right" style="font-weight:700; color:#0a7042;">₹0 (Free Trial)</td>
+        </tr>
+        <tr>
+          <td><strong>Milestone 2: Domain Go-Live &amp; Setup</strong></td>
+          <td>Connecting official domain (<code>aanalgurukul.com</code>), SSL, and live Razorpay merchant activation</td>
+          <td class="text-right" style="font-weight:700;">50% Advance (₹17,500)</td>
+        </tr>
+        <tr>
+          <td><strong>Milestone 3: Final Handover &amp; Training</strong></td>
+          <td>Product catalog upload, admin portal handover, and staff training</td>
+          <td class="text-right" style="font-weight:700;">50% on Handover (₹17,500)</td>
+        </tr>
+        <tr style="background:#fcfaf5;">
+          <td colspan="2"><strong>Total One-Time Project Setup Fee (Growth Tier):</strong></td>
+          <td class="text-right" style="font-size:15px; font-weight:700; color:var(--royal);">₹35,000</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top: 25px; font-size: 16px;">3. Post-Launch Maintenance &amp; Retainer Plan (AMC)</h3>
+    <p style="font-size: 12px; color: #555;">
+      After launch, Client agrees to an ongoing monthly maintenance retainer of <strong>₹2,500 / month</strong> (or ₹25,000 / year if paid annually upfront), covering:
+    </p>
+    <ul style="font-size: 12px; color: #444; padding-left: 20px; line-height: 1.8;">
+      <li><strong>Product Catalog Updates:</strong> Adding, editing, or removing up to 15 new outfits/collections per month.</li>
+      <li><strong>Banner &amp; Festive Campaign Changes:</strong> Seasonal hero banners for Navratri, Diwali, and Wedding seasons.</li>
+      <li><strong>Technical Support &amp; Uptime Guarantee:</strong> 99.9% cloud server uptime, security patches, and SSL certificate auto-renewals.</li>
+      <li><strong>Coupon Code Management:</strong> Creating custom promotional codes for sales and VIP marketing.</li>
+    </ul>
+
+    <h3 style="margin-top: 25px; font-size: 16px;">4. Revision Policy &amp; Additional Out-of-Scope Work</h3>
+    <ul style="font-size: 12px; color: #444; padding-left: 20px; line-height: 1.8;">
+      <li><strong>Free Revisions:</strong> Two (2) rounds of visual styling, text, and layout tweaks are included free during the first 14 days after go-live.</li>
+      <li><strong>Major Feature Additions:</strong> Any new custom feature requests outside the agreed scope (e.g., custom mobile app, multi-vendor marketplace, third-party ERP integrations) will be billed at a discounted client rate of <strong>₹800 / hour</strong> or quoted as a separate fixed milestone.</li>
+    </ul>
+
+    <h3 style="margin-top: 25px; font-size: 16px;">5. Ownership &amp; Intellectual Property</h3>
+    <p style="font-size: 12px; color: #555;">
+      Upon receipt of final payment, Client owns full rights to their domain name, brand assets, product catalog, customer data, and website content.
+    </p>
+
+    <!-- Signatures -->
+    <div style="margin-top: 50px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; border-top: 1px solid var(--border); padding-top: 30px;">
+      <div>
+        <p style="font-size: 12px; margin: 0 0 40px 0; color: #666;">For &amp; on behalf of <strong>Aanal Gurukul</strong>:</p>
+        <div style="border-bottom: 1px solid #333; width: 80%;"></div>
+        <p style="font-size: 12px; font-weight: bold; margin: 8px 0 2px 0;">Authorized Signature &amp; Store Stamp</p>
+        <p style="font-size: 11px; color: #888; margin: 0;">Name &amp; Designation: Owner / Partner</p>
+      </div>
+
+      <div>
+        <p style="font-size: 12px; margin: 0 0 40px 0; color: #666;">For &amp; on behalf of <strong>Developer / Agency</strong>:</p>
+        <div style="border-bottom: 1px solid #333; width: 80%;"></div>
+        <p style="font-size: 12px; font-weight: bold; margin: 8px 0 2px 0;">Authorized Signature</p>
+        <p style="font-size: 11px; color: #888; margin: 0;">Lead Developer / Consultant</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

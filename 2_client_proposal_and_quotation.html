@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document 2: Commercial Quotation & Proposal - Aanal Gurukul</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap');
+  
+  :root {
+    --gold: #c58f27;
+    --royal: #1b2a4a;
+    --dark: #101c33;
+    --light-gold: #fbf9f4;
+    --border: #e6dfd1;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: #222;
+    background-color: #f8f6f2;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+  }
+
+  .page-container {
+    max-width: 850px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 40px 50px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border: 1px solid var(--border);
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--royal);
+  }
+
+  .font-display {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.15em;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .badge-gold {
+    background: #fdf6e7;
+    color: #976508;
+    border: 1px solid #e8c87f;
+  }
+
+  .badge-royal {
+    background: #eef2f9;
+    color: #1b2a4a;
+    border: 1px solid #cbd6e8;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 13px;
+  }
+
+  th {
+    background: #fbf9f5;
+    color: var(--royal);
+    text-align: left;
+    padding: 12px 14px;
+    font-weight: 700;
+    border-bottom: 2px solid var(--border);
+  }
+
+  td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .text-right { text-align: right; }
+  .text-center { text-align: center; }
+
+  .summary-card {
+    background: #fbf9f5;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  .print-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--royal);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .print-btn:hover { background: var(--gold); }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page-container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+    .print-btn { display: none; }
+  }
+</style>
+</head>
+<body>
+  <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+
+  <div class="page-container">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid var(--border); padding-bottom: 20px;">
+      <div>
+        <span class="badge badge-gold">EXCLUSIVELY PREPARED FOR</span>
+        <h1 style="font-size: 26px; margin: 10px 0 4px 0;">Aanal Gurukul Flagship Store</h1>
+        <p style="font-size: 12px; color: #666; margin: 0;">G4, Shantam Complex, Gurukul Road, Ahmedabad, Gujarat 380052</p>
+      </div>
+      <div class="text-right">
+        <span class="font-display" style="font-size: 20px; font-weight: 700; color: var(--royal);">AANAL</span><br>
+        <span style="font-size: 11px; letter-spacing: 2px; color: var(--gold); font-weight: 700;">GURUKUL</span>
+      </div>
+    </div>
+
+    <div style="background: #faf7f2; border-left: 4px solid var(--gold); padding: 15px 20px; margin: 25px 0; border-radius: 0 8px 8px 0;">
+      <p style="margin: 0; font-size: 13px; color: #444;">
+        <strong>Project Overview:</strong> Launching a modern, high-speed luxury e-commerce platform for Aanal Gurukul with integrated 1-Click WhatsApp Buying, Razorpay &amp; UPI Payment Gateway, Custom Tailoring Measurement Forms, Multi-Currency NRI conversion, and automated GST billing.
+      </p>
+    </div>
+
+    <h3 style="margin-top: 25px;">Live Interactive Preview (14-Day Test Trial)</h3>
+    <p style="font-size: 13px; color: #555;">
+      Your store website is already designed and live for your evaluation at: <br>
+      <a href="https://devibe70-ux.github.io/AANAL/" target="_blank" style="color: var(--royal); font-weight: bold; text-decoration: underline;">https://devibe70-ux.github.io/AANAL/</a>
+    </p>
+
+    <h3 style="margin-top: 30px;">Package Options &amp; Investment Quotation</h3>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 25%;">Package</th>
+          <th style="width: 45%;">Included Capabilities</th>
+          <th class="text-right" style="width: 30%;">Investment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <strong style="color: var(--royal); font-size: 14px;">1. Starter Digital Store</strong><br>
+            <span style="font-size: 11px; color: #777;">WhatsApp Commerce</span>
+          </td>
+          <td style="font-size: 12px;">
+            &bull; Mobile-Optimized Luxury Storefront<br>
+            &bull; Up to 30 Catalog Products with Size Selectors<br>
+            &bull; <strong>1-Click WhatsApp Direct Buy Box</strong><br>
+            &bull; Flagship Store Locator &amp; Google Map<br>
+            &bull; High-Speed Cloud Hosting &amp; SSL Padlock
+          </td>
+          <td class="text-right">
+            <span style="font-size: 16px; font-weight: 700; color: var(--royal);">₹20,000</span><br>
+            <small style="color: #666;">One-Time Setup</small>
+          </td>
+        </tr>
+        <tr style="background: #fdfbf7;">
+          <td>
+            <span class="badge badge-gold" style="margin-bottom: 4px;">MOST POPULAR ⭐</span><br>
+            <strong style="color: var(--royal); font-size: 15px;">2. Growth E-Commerce</strong><br>
+            <span style="font-size: 11px; color: #777;">Full Online Payments</span>
+          </td>
+          <td style="font-size: 12px;">
+            &bull; <strong>Everything in Starter, plus:</strong><br>
+            &bull; <strong>Razorpay, UPI QR (GPay/PhonePe), Card &amp; COD Gateway</strong><br>
+            &bull; <strong>Custom Made-to-Measure Tailoring Form</strong><br>
+            &bull; <strong>Live Order Timeline Tracking</strong> (Dispatched &bull; Delivered)<br>
+            &bull; <strong>Automated GST Tax Invoice Generator</strong><br>
+            &bull; Discount Promo Engine (<code>AANAL10</code>, <code>FESTIVE15</code>)<br>
+            &bull; Google Merchant Center Shopping Feed
+          </td>
+          <td class="text-right">
+            <span style="font-size: 18px; font-weight: 700; color: #0a7042;">₹35,000</span><br>
+            <small style="color: #666;">+ ₹2,500/mo Maintenance &amp; Updates</small>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong style="color: var(--royal); font-size: 14px;">3. Luxury NRI Enterprise</strong><br>
+            <span style="font-size: 11px; color: #777;">Global Bridal Couture</span>
+          </td>
+          <td style="font-size: 12px;">
+            &bull; <strong>Everything in Growth, plus:</strong><br>
+            &bull; <strong>Multi-Currency Global Switcher</strong> (USD, GBP, AED, CAD)<br>
+            &bull; <strong>Book a Call Now</strong> Virtual Stylist Video Scheduler<br>
+            &bull; Unlimited Product Catalog Updates (100+ SKUs)<br>
+            &bull; Festive season priority banner campaigns (Navratri, Diwali)
+          </td>
+          <td class="text-right">
+            <span style="font-size: 16px; font-weight: 700; color: var(--royal);">₹55,000</span><br>
+            <small style="color: #666;">+ ₹4,000/mo Retainer</small>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top: 30px;">Why Aanal Gurukul Wins with this Website</h3>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 12px; margin-top: 10px;">
+      <div style="background:#fbf9f5; padding:12px; border-radius:8px; border:1px solid var(--border);">
+        <strong>💰 Save 25% – 35% Marketplace Commission:</strong> Unlike Amazon or Myntra that deduct 30% per order, keep 100% of profits from direct customer sales.
+      </div>
+      <div style="background:#fbf9f5; padding:12px; border-radius:8px; border:1px solid var(--border);">
+        <strong>🌍 Capture High-Ticket NRI Clients:</strong> Gujarati brides in the USA, UK, and UAE can browse in their local currency and place custom stitching orders directly.
+      </div>
+      <div style="background:#fbf9f5; padding:12px; border-radius:8px; border:1px solid var(--border);">
+        <strong>⚡ 1-Click WhatsApp Shopping:</strong> Customers tap "Buy on WhatsApp" and the exact lehenga name, price, and selected size appear in your store chat.
+      </div>
+      <div style="background:#fbf9f5; padding:12px; border-radius:8px; border:1px solid var(--border);">
+        <strong>✂️ Zero Fitting Returns:</strong> Custom measurement inputs (Bust, Waist, Hips, Height) guarantee tailor-accurate fits before dispatch.
+      </div>
+    </div>
+
+    <div style="margin-top: 35px; border-top: 1px solid var(--border); padding-top: 20px; font-size: 11px; color: #888; display: flex; justify-content: space-between;">
+      <span>Prepared for: Owner, Aanal Gurukul</span>
+      <span>Validity: 14 Days from Meeting</span>
+    </div>
+  </div>
+</body>
+</html>
