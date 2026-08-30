@@ -34,7 +34,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 }) => {
   const { itemCount, setIsCartOpen } = useCart();
   const { wishlistCount } = useWishlist();
-  const { currency, setCurrency, rates } = useCurrency();
+  const { currency, setCurrency, supportedCurrencies } = useCurrency();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [currencyDropdownOpen, setCurrencyDropdownOpen] = useState(false);
@@ -79,7 +79,6 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
 
         <div className="hidden lg:flex items-center gap-4 text-[11px]">
-          {/* USER SPECIFIED: Book a Call Now */}
           <button 
             onClick={onOpenBookStylist} 
             className="hover:text-gold-300 transition-colors flex items-center gap-1 font-bold text-gold-300 bg-white/10 px-2.5 py-0.5 rounded-full border border-gold-400/30"
@@ -94,30 +93,30 @@ export const Navbar: React.FC<NavbarProps> = ({
             <MapPin className="w-3.5 h-3.5 text-gold-400" /> Visit Gurukul Flagship Store
           </button>
 
-          {/* Currency Switcher */}
+          {/* Vercel Geolocation & Localized Currency Switcher */}
           <div className="relative">
             <button
               onClick={() => setCurrencyDropdownOpen(!currencyDropdownOpen)}
-              className="flex items-center gap-1.5 bg-black/30 hover:bg-black/50 px-2.5 py-1 rounded border border-white/10 text-gold-200 transition-colors"
+              className="flex items-center gap-1.5 bg-black/30 hover:bg-black/50 px-2.5 py-1 rounded border border-white/10 text-gold-200 transition-colors font-mono"
             >
               <Globe className="w-3 h-3 text-gold-400" />
-              <span>{currency}</span>
+              <span>{currency} ({supportedCurrencies[currency]?.symbol})</span>
             </button>
             {currencyDropdownOpen && (
-              <div className="absolute right-0 mt-1 w-32 bg-[#1b2a4a] border border-gold-500/30 rounded shadow-xl py-1 z-50">
-                {(Object.keys(rates) as CurrencyCode[]).map((code) => (
+              <div className="absolute right-0 mt-1 w-36 bg-[#1b2a4a] border border-gold-500/30 rounded-xl shadow-2xl py-1 z-50 overflow-hidden">
+                {(Object.keys(supportedCurrencies) as CurrencyCode[]).map((code) => (
                   <button
                     key={code}
                     onClick={() => {
                       setCurrency(code);
                       setCurrencyDropdownOpen(false);
                     }}
-                    className={`w-full text-left px-3 py-1.5 text-xs flex justify-between hover:bg-gold-500/20 ${
+                    className={`w-full text-left px-3 py-1.5 text-xs flex justify-between items-center hover:bg-gold-500/20 transition-colors ${
                       currency === code ? 'text-gold-300 font-bold bg-gold-500/10' : 'text-slate-200'
                     }`}
                   >
                     <span>{code}</span>
-                    <span className="text-slate-400">{rates[code].symbol}</span>
+                    <span className="text-slate-400 font-mono text-[11px]">{supportedCurrencies[code].symbol}</span>
                   </button>
                 ))}
               </div>
@@ -286,9 +285,9 @@ export const Navbar: React.FC<NavbarProps> = ({
                   onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
                   className="text-xs bg-white border border-gold-300 rounded px-2 py-1 font-semibold text-royal-900"
                 >
-                  {(Object.keys(rates) as CurrencyCode[]).map((c) => (
+                  {(Object.keys(supportedCurrencies) as CurrencyCode[]).map((c) => (
                     <option key={c} value={c}>
-                      {c} ({rates[c].symbol})
+                      {c} ({supportedCurrencies[c].symbol})
                     </option>
                   ))}
                 </select>

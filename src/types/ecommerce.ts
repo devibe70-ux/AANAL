@@ -1,4 +1,4 @@
-export type CurrencyCode = 'INR' | 'USD' | 'GBP' | 'EUR' | 'AED' | 'CAD';
+export type CurrencyCode = 'USD' | 'EUR' | 'GBP' | 'INR' | 'CAD' | 'AUD' | 'AED';
 
 export interface Product {
   id: string;
@@ -38,9 +38,10 @@ export interface CustomMeasurements {
   shoulder: string;
   armhole: string;
   blouseLength: string;
-  lehengaLength: string;
+  lehengaLength?: string;
   height: string;
   specialInstructions?: string;
+  specialNotes?: string;
 }
 
 export interface CartItem {
@@ -48,13 +49,13 @@ export interface CartItem {
   quantity: number;
   selectedSize: string;
   selectedColor: string;
+  stitchingOption: 'ready-to-wear' | 'custom-stitched';
   customMeasurements?: CustomMeasurements;
-  stitchingOption: 'ready-to-wear' | 'custom-stitched' | 'unstitched';
 }
 
 export interface Coupon {
   code: string;
-  discountType: 'percentage' | 'fixed';
+  discountType: 'percentage' | 'fixed' | 'percent';
   value: number;
   minSpend: number;
   description: string;
@@ -62,8 +63,8 @@ export interface Coupon {
 
 export interface ShippingAddress {
   fullName: string;
-  email: string;
   phone: string;
+  email: string;
   addressLine1: string;
   addressLine2?: string;
   city: string;
@@ -72,36 +73,36 @@ export interface ShippingAddress {
   country: string;
 }
 
-export type PaymentMethod = 'razorpay' | 'upi' | 'card' | 'cod';
+export type PaymentMethod = 'razorpay' | 'upi' | 'cod' | 'card';
 
 export interface Order {
   id: string;
-  date: string;
   items: CartItem[];
-  shippingAddress: ShippingAddress;
-  shippingMethod: string;
-  shippingCost: number;
   subtotal: number;
   discount: number;
+  shippingCost: number;
   total: number;
   currency: CurrencyCode;
+  shippingAddress: ShippingAddress;
   paymentMethod: PaymentMethod;
-  paymentStatus: 'paid' | 'pending' | 'cod';
   paymentId?: string;
+  paymentStatus: 'paid' | 'pending' | 'failed' | 'cod' | string;
+  orderStatus: 'Confirmed' | 'Fabric Sourcing' | 'Tailoring & Stitching' | 'Quality Check' | 'Dispatched' | 'Delivered' | 'confirmed' | 'fabric_sourcing' | 'tailoring' | 'quality_check' | 'dispatched' | 'delivered' | string;
+  status?: string;
+  date: string;
+  estimatedDelivery?: string;
+  estimatedDeliveryDate?: string;
   trackingNumber: string;
-  orderStatus: 'Confirmed' | 'Fabric Sourcing' | 'Tailoring & Stitching' | 'Quality Check' | 'Dispatched' | 'Out for Delivery' | 'Delivered';
-  estimatedDelivery: string;
+  shippingMethod: string;
 }
 
 export interface Review {
   id: string;
-  productId: string;
   author: string;
-  city: string;
+  location: string;
   rating: number;
   date: string;
-  title: string;
   comment: string;
-  verifiedPurchase: boolean;
-  likes: number;
+  verified: boolean;
+  avatar?: string;
 }
