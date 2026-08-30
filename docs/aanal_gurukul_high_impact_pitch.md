@@ -1,7 +1,7 @@
-# Pitch Deck & Growth Plan: Aanal Gurukul &times; AntiGravity
+# Pitch Deck & Growth Plan: Aanal Gurukul &times; DE VIBE
 
 > **Client Target**: Owner & Leadership Team, Aanal Gurukul (Shantam Complex, Gurukul Road, Ahmedabad)  
-> **Prepared by**: AntiGravity Digital Commerce & Growth  
+> **Prepared by**: DE VIBE Digital Commerce & Growth  
 > **Interactive Live Demonstration**: [https://devibe70-ux.github.io/AANAL/](https://devibe70-ux.github.io/AANAL/)
 
 ---
@@ -10,7 +10,7 @@
 
 Aanal Gurukul has established exceptional artisan authority in Ahmedabad for bridal couture, authentic Kutch mirror-work, Lakhnavi Chikankari, and contemporary draped silhouettes. However, **over 80% of modern ethnic couture discovery now begins on digital channels** (Instagram reels, Google Shopping, WhatsApp bridal inquiries, and overseas NRI searches).
 
-AntiGravity does not just offer "website design." We deliver an **Integrated Customer Acquisition & Retention Engine** that transforms digital browsers into paying clients—both online and at your physical Gurukul Road boutique.
+DE VIBE does not just offer "website design." We deliver an **Integrated Customer Acquisition & Retention Engine** that transforms digital browsers into paying clients—both online and at your physical Gurukul Road boutique.
 
 ```mermaid
 graph LR
@@ -29,7 +29,7 @@ graph LR
 * Traditional static catalogs or PDF lookbooks create massive drop-offs. Customers see an outfit on Instagram, ask "Price please?", wait hours for a reply, and lose buying intent.
 * Lack of size confidence leads to hesitation for high-ticket bridal and festive wear.
 
-### The AntiGravity Solution: Interactive Demo Storefront
+### The DE VIBE Solution: Interactive Demo Storefront
 * **1-Click WhatsApp Commerce Box**: Every product card, story reel, and detail view features a direct WhatsApp Buy trigger pre-populated with exact SKU, size, color, and price. Zero friction.
 * **Bespoke Made-to-Measure Engine**: Digital custom measurement module (Bust, Waist, Hips, Height, Blouse/Lehenga length) removes return anxieties and ensures master tailor accuracy.
 * **Vercel Edge Geolocation & Multi-Currency Engine**: Automatically detects visitors from the USA, UK, UAE, Canada, and Australia, rendering prices in local currencies (`USD`, `GBP`, `AED`, `EUR`, `CAD`) to capture high-margin NRI wedding buyers.
@@ -41,7 +41,7 @@ graph LR
 ### The Pain Point
 * Satisfied bridal and festive customers leave the store thrilled, but rarely write Google Reviews unless prompted. Aanal's stellar offline reputation remains under-represented online.
 
-### The AntiGravity Solution: Frictionless Review Capture Loop
+### The DE VIBE Solution: Frictionless Review Capture Loop
 1. **Dynamic Website Review Carousels**: Verified 5-star Google review feeds prominently displayed on the homepage build instant trust with first-time visitors.
 2. **In-Store Checkout QR Desk Cards**: Sleek branded acrylic stands placed at the billing counter in the Shantam Complex store with a "Scan to Review & Receive 10% Off Next Festive Purchase" QR code.
 3. **Automated Post-Delivery Review Pings**: Automated WhatsApp order follow-ups asking for fit feedback with a 1-tap Google Maps review link.
@@ -53,7 +53,7 @@ graph LR
 ### The Pain Point
 * When customers in Ahmedabad or abroad search Google for *"Wine Bridal Lehenga Ahmedabad"* or *"Pure Salsa Silk Palazzo Set"*, generic marketplaces like Myntra and Amazon rank because the boutique's catalog is not indexed into Google Shopping.
 
-### The AntiGravity Solution: Automated Google Merchant Center Feed
+### The DE VIBE Solution: Automated Google Merchant Center Feed
 * **Standardized RSS 2.0 XML Engine**: The site generates a live Google Shopping feed (`/api/feed.xml` / Google Merchant Center sync) that feeds title, high-resolution imagery, fabric specifications, availability, and pricing directly to Google.
 * **High-Intent Search Capture**: Captures searchers looking for niche terms:
   - *Lakhnavi Chikankari Nayra Cut Suit*
@@ -63,9 +63,9 @@ graph LR
 
 ---
 
-## 💼 The AntiGravity Advantage: Strategic Growth Partner vs. Passive Agency
+## 💼 The DE VIBE Advantage: Strategic Growth Partner vs. Passive Agency
 
-| Attribute | Traditional Web Developer | The AntiGravity Growth Engine |
+| Attribute | Traditional Web Developer | The DE VIBE Growth Engine |
 | :--- | :--- | :--- |
 | **Business Objective** | "Build a static site and disappear" | **Drive real revenue & Shantam boutique footfall** |
 | **Catalog Architecture** | Manual, slow updates | **Pre-scraped, verified 22+ SKU live catalog** |
@@ -91,7 +91,7 @@ graph LR
 
 ## 🗣️ Closing Pitch Script for Owner Meeting
 
-> *"Bhavinbhai / Sir, other agencies will pitch you slides and wireframes. We have already built your actual, high-speed luxury storefront with 22 of your real outfits, live right now on your smartphone.*
+> *"Viragbhai / Sir, other agencies will pitch you slides and wireframes. We have already built your actual, high-speed luxury storefront with 22 of your real outfits, live right now on your smartphone.*
 > 
 > *Test the 'Buy on WhatsApp' button, try the custom stitching form, and see how fast it loads. We are giving you a **7-day free trial** to put this in your Instagram bio and share it with your VIP clients.*
 > 
