@@ -19,9 +19,9 @@
 
 ## 2. Milestone Payment Schedule
 * **Milestone 1: 7-Day Free Evaluation**: ₹0 (Free trial on live preview domain).
-* **Milestone 2: Domain Go-Live & Payment Setup**: 50% Advance (₹17,500).
-* **Milestone 3: Final Catalog Upload & Handover**: 50% Balance on Handover (₹17,500).
-* **Total Project Setup (Growth Tier)**: **₹35,000**.
+* **Milestone 2: Domain Go-Live & Payment Setup**: 50% Advance (₹15,000).
+* **Milestone 3: Final Catalog Upload & Handover**: 50% Balance on Handover (₹15,000).
+* **Total Project Setup (Growth Tier)**: **₹30,000 (Incl. 18% GST)**.
 
 ---
 
