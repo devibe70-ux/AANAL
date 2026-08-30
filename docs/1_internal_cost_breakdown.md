@@ -31,4 +31,4 @@
 ## 3. Key Infrastructure Rules
 1. **Never buy GoDaddy hosting packages.** Buy only the naked domain name (~₹499–₹999) and uncheck all add-ons.
 2. **Host on Vercel for free.** Connect repository `devibe70-ux/AANAL` to Vercel and point DNS A Record `76.76.21.21`.
-3. **14-Day Free Evaluation:** The current preview is live on GitHub Pages with ₹0 investment. If the client declines at Day 14, you have lost zero capital.
+3. **7-Day Free Evaluation:** The current preview is live on GitHub Pages with ₹0 investment. If the client declines at Day 14, you have lost zero capital.

@@ -72,15 +72,15 @@ graph LR
 | **Payment & Ordering** | Basic form or third-party checkout | **Razorpay + 1-Click WhatsApp + UPI QR + COD** |
 | **International NRI Reach** | Single currency (INR only) | **Vercel Edge Geo-detection (USD, GBP, AED, CAD)** |
 | **Local Discovery** | None | **In-store review QR + Google Merchant Shopping Feed** |
-| **Risk & Commitment** | Demands 100% advance before seeing anything | **14-Day Free Evaluation on Live Working Prototype** |
+| **Risk & Commitment** | Demands 100% advance before seeing anything | **7-Day Free Evaluation on Live Working Prototype** |
 
 ---
 
 ## 📈 Commercial Proposal & Phased Implementation
 
-### 14-Day Zero-Risk Trial
+### 7-Day Zero-Risk Trial
 * **The Site is Already Live**: [https://devibe70-ux.github.io/AANAL/](https://devibe70-ux.github.io/AANAL/)
-* **Test Window**: 14 Days to test with actual customers and team members.
+* **Test Window**: 7 Days to test with actual customers and team members.
 
 ### Investment Packages
 1. **Starter Digital Catalog (₹20,000)**: Mobile storefront, WhatsApp 1-Click Commerce, Store Locator.
@@ -93,6 +93,6 @@ graph LR
 
 > *"Bhavinbhai / Sir, other agencies will pitch you slides and wireframes. We have already built your actual, high-speed luxury storefront with 22 of your real outfits, live right now on your smartphone.*
 > 
-> *Test the 'Buy on WhatsApp' button, try the custom stitching form, and see how fast it loads. We are giving you a **14-day free trial** to put this in your Instagram bio and share it with your VIP clients.*
+> *Test the 'Buy on WhatsApp' button, try the custom stitching form, and see how fast it loads. We are giving you a **7-day free trial** to put this in your Instagram bio and share it with your VIP clients.*
 > 
 > *When you see the WhatsApp inquiries and orders rolling in, we will connect your official domain and scale your brand together. Let's take Aanal Gurukul global."*

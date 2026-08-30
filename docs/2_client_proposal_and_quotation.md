@@ -1,7 +1,7 @@
 # Website Proposal & Pricing for Aanal Gurukul
 
 **Prepared for:** Owner & Team, Aanal Gurukul (Shantam Complex, Gurukul Road, Ahmedabad)  
-**Live Website Preview (14-Day Free Trial):** [https://devibe70-ux.github.io/AANAL/](https://devibe70-ux.github.io/AANAL/)
+**Live Website Preview (7-Day Free Trial):** [https://devibe70-ux.github.io/AANAL/](https://devibe70-ux.github.io/AANAL/)
 
 ---
 

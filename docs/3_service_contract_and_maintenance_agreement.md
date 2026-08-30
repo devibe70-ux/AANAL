@@ -18,7 +18,7 @@
 ---
 
 ## 2. Milestone Payment Schedule
-* **Milestone 1: 14-Day Free Evaluation**: ₹0 (Free trial on live preview domain).
+* **Milestone 1: 7-Day Free Evaluation**: ₹0 (Free trial on live preview domain).
 * **Milestone 2: Domain Go-Live & Payment Setup**: 50% Advance (₹17,500).
 * **Milestone 3: Final Catalog Upload & Handover**: 50% Balance on Handover (₹17,500).
 * **Total Project Setup (Growth Tier)**: **₹35,000**.
@@ -35,7 +35,7 @@
 ---
 
 ## 4. Revisions & Out-of-Scope Work
-* **Free Revisions**: Two (2) full rounds of styling, text, and layout tweaks are included within the first 14 days of go-live.
+* **Free Revisions**: Two (2) full rounds of styling, text, and layout tweaks are included within the first 7 days of go-live.
 * **Extra Out-of-Scope Requests**: Major feature additions (custom native mobile apps, third-party ERP sync) will be billed at **₹800 / hour** or quoted under separate milestone.
 
 ---
