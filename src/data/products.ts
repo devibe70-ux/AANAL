@@ -77,7 +77,7 @@ export const PRODUCTS: Product[] = [
     sku: "AG-SHA-003",
     description: "A breathtaking bridal & festive ensemble featuring a vivid scarlet red peplum kurti layered with intricate gota patti, kundan, and resham thread work, paired with a dramatic layered flared sharara and scalloped organza dupatta.",
     short_description: "Scarlet red peplum tunic paired with heavy flare tier sharara and scalloped dupatta.",
-    categories: ["Sharara", "Chaniya Choli", "Wedding"],
+    categories: ["Sharara", "Wedding", "Festive"],
     occasions: ["Wedding", "Mehendi", "Sangeet", "Festive"],
     images: [
       "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-19-at-2.19.42-PM.jpeg"
@@ -170,7 +170,7 @@ export const PRODUCTS: Product[] = [
     sku: "AG-CRX-006",
     description: "An ethereal dual-tone festive lehenga featuring a Toscana green heavily embellished crop top with mirror and thread embroidery, paired with a vibrant sunshine yellow flared lehenga skirt with 6-meter flair.",
     short_description: "Designer green crop top paired with bright yellow heavy flare lehenga and net dupatta.",
-    categories: ["Croptop", "Chaniya Choli", "Lehenga"],
+    categories: ["Lehenga", "Chaniya Choli", "Croptop"],
     occasions: ["Navratri", "Sangeet", "Mehendi", "Wedding"],
     images: [
       "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-19-at-15.10.05.jpeg"
@@ -356,7 +356,7 @@ export const PRODUCTS: Product[] = [
     sku: "AG-CRX-012",
     description: "Regal wine purple 3-piece designer outfit. Heavily hand-embroidered crop top with zardozi and nakshi work, paired with a voluminous circular skirt and a statement sheer shrug with dramatic bell sleeves.",
     short_description: "Rich wine purple crop top, flared skirt, and embroidered statement shrug.",
-    categories: ["Croptop", "Indowestern", "Lehenga"],
+    categories: ["Lehenga", "Chaniya Choli", "Croptop", "Indowestern"],
     occasions: ["Reception", "Sangeet", "Cocktail", "Wedding"],
     images: [
       "https://aanalgurukul.com/wp-content/uploads/2023/03/WhatsApp-Image-2023-02-19-at-2.19.51-PM-2.jpeg"
@@ -511,7 +511,7 @@ export const PRODUCTS: Product[] = [
     sku: "AG-PLZ-017",
     description: "Woven with heritage Ahmedabad Kinkhab brocade techniques, this pastel onion pink palazzo suit combines royal vintage luster with clean modern lines and delicate pearl fringes.",
     short_description: "Pastel onion pink Kinkhab brocade kurti dress with flared palazzo and pearl accents.",
-    categories: ["Palazzo", "Co-ords", "Indowestern"],
+    categories: ["Co-ords", "Palazzo", "Indowestern"],
     occasions: ["Sangeet", "Festive", "Reception", "Family Functions"],
     images: [
       "https://aanalgurukul.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-29-at-1.43.48-PM.jpeg"
@@ -573,7 +573,7 @@ export const PRODUCTS: Product[] = [
     sku: "AG-CHN-019",
     description: "The crown jewel of traditional Gujarati festive couture. Vivid Rani pink adorned with real mirror work, Abhala craft, copper gota borders, and heavy tassels. Perfect for Navratri and destination weddings.",
     short_description: "Authentic Gujarati Rani pink handwork chaniya choli with real mirrors and 8m flair.",
-    categories: ["Chaniya Choli", "Lehenga", "Wedding"],
+    categories: ["Lehenga", "Chaniya Choli", "Wedding"],
     occasions: ["Navratri", "Wedding", "Sangeet", "Festive"],
     images: [
       "https://aanalgurukul.com/wp-content/uploads/2026/07/Photoroom-20250408_191909.png"
@@ -635,7 +635,7 @@ export const PRODUCTS: Product[] = [
     sku: "AG-PLZ-021",
     description: "Luxurious salsa silk in refreshing mint pista. Detailed with handcrafted zardozi neck yoke, scalloped side vents, and wide-leg palazzo pants with golden hem borders.",
     short_description: "Pure salsa silk handcrafted palazzo suit in soothing mint green with zardozi embroidery.",
-    categories: ["Palazzo", "Sharara", "Plus Size"],
+    categories: ["Sharara", "Palazzo", "Plus Size"],
     occasions: ["Festive", "Puja", "Family Gathering", "Mehendi"],
     images: [
       "https://aanalgurukul.com/wp-content/uploads/2026/07/Picsart_26-07-07_14-39-31-106-scaled.png"
@@ -687,15 +687,23 @@ export const PRODUCTS: Product[] = [
   }
 ];
 
+// Helper to get EXACT dynamic product count for any category
+export function getCategoryCount(products: Product[], categoryId: string): number {
+  if (categoryId === 'all') return products.length;
+  return products.filter((p) =>
+    p.categories.some((c) => c.toLowerCase() === categoryId.toLowerCase())
+  ).length;
+}
+
 export const CATEGORIES = [
   { id: "all", name: "All Collections", count: 22, image: "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-16-at-12.47.38.jpeg" },
-  { id: "Lehenga", name: "Lehenga & Chaniya Choli", count: 8, image: "https://aanalgurukul.com/wp-content/uploads/2026/07/Photoroom-20250408_191909.png" },
-  { id: "Gowns", name: "Designer Gowns", count: 4, image: "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-16-at-12.47.43-2.jpeg" },
-  { id: "Sharara", name: "Sharara & Palazzo Suits", count: 6, image: "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-19-at-2.19.42-PM.jpeg" },
-  { id: "Palazzo & Shrug", name: "Shrug & Jacket Sets", count: 5, image: "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-19-at-15.10.01.jpeg" },
-  { id: "Nayra Cut", name: "Nayra Cut Suits", count: 4, image: "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-19-at-15.09.55-2.jpeg" },
-  { id: "Co-ords", name: "Indo-Western Co-ords", count: 4, image: "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-19-at-15.25.04.jpeg" },
-  { id: "Plus Size", name: "Plus Size Couture (3XL-5XL)", count: 5, image: "https://aanalgurukul.com/wp-content/uploads/2026/07/Picsart_26-07-07_14-39-31-106-scaled.png" }
+  { id: "Lehenga", name: "Lehenga & Chaniya Choli", count: 6, image: "https://aanalgurukul.com/wp-content/uploads/2026/07/Photoroom-20250408_191909.png" },
+  { id: "Gowns", name: "Designer Gowns", count: 3, image: "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-16-at-12.47.43-2.jpeg" },
+  { id: "Sharara", name: "Sharara & Palazzo Suits", count: 3, image: "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-19-at-2.19.42-PM.jpeg" },
+  { id: "Palazzo & Shrug", name: "Shrug & Jacket Sets", count: 4, image: "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-19-at-15.10.01.jpeg" },
+  { id: "Nayra Cut", name: "Nayra Cut Suits", count: 3, image: "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-19-at-15.09.55-2.jpeg" },
+  { id: "Co-ords", name: "Indo-Western Co-ords", count: 3, image: "https://aanalgurukul.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-19-at-15.25.04.jpeg" },
+  { id: "Plus Size", name: "Plus Size Couture (3XL-5XL)", count: 4, image: "https://aanalgurukul.com/wp-content/uploads/2026/07/Picsart_26-07-07_14-39-31-106-scaled.png" }
 ];
 
 export const OCCASIONS = [

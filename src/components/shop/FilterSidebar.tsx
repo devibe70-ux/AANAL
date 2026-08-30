@@ -1,9 +1,11 @@
 import React from 'react';
-import { Filter, X, RotateCcw } from 'lucide-react';
-import { CATEGORIES, OCCASIONS } from '../../data/products';
+import { Filter, RotateCcw } from 'lucide-react';
+import { CATEGORIES, OCCASIONS, getCategoryCount } from '../../data/products';
+import { Product } from '../../types/ecommerce';
 import { useCurrency } from '../../context/CurrencyContext';
 
 interface FilterSidebarProps {
+  products: Product[];
   selectedCategory: string;
   onSelectCategory: (cat: string) => void;
   selectedOccasion: string;
@@ -17,6 +19,7 @@ interface FilterSidebarProps {
 }
 
 export const FilterSidebar: React.FC<FilterSidebarProps> = ({
+  products,
   selectedCategory,
   onSelectCategory,
   selectedOccasion,
@@ -51,20 +54,23 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
           Collection Category
         </h4>
         <div className="space-y-1.5">
-          {CATEGORIES.map((c) => (
-            <button
-              key={c.id}
-              onClick={() => onSelectCategory(c.id)}
-              className={`w-full text-left px-3 py-1.5 rounded-lg text-xs flex justify-between items-center transition-colors ${
-                selectedCategory === c.id
-                  ? 'bg-royal-900 text-gold-300 font-bold'
-                  : 'text-slate-700 hover:bg-gold-50'
-              }`}
-            >
-              <span>{c.name}</span>
-              <span className="text-[10px] opacity-70 font-mono">({c.count})</span>
-            </button>
-          ))}
+          {CATEGORIES.map((c) => {
+            const count = getCategoryCount(products, c.id);
+            return (
+              <button
+                key={c.id}
+                onClick={() => onSelectCategory(c.id)}
+                className={`w-full text-left px-3 py-1.5 rounded-lg text-xs flex justify-between items-center transition-colors ${
+                  selectedCategory === c.id
+                    ? 'bg-royal-900 text-gold-300 font-bold'
+                    : 'text-slate-700 hover:bg-gold-50'
+                }`}
+              >
+                <span>{c.name}</span>
+                <span className="text-[10px] opacity-70 font-mono">({count})</span>
+              </button>
+            );
+          })}
         </div>
       </div>
 

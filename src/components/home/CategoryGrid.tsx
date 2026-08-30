@@ -1,12 +1,14 @@
 import React from 'react';
-import { CATEGORIES } from '../../data/products';
+import { CATEGORIES, getCategoryCount } from '../../data/products';
+import { Product } from '../../types/ecommerce';
 import { ArrowRight } from 'lucide-react';
 
 interface CategoryGridProps {
+  products: Product[];
   onSelectCategory: (categoryId: string) => void;
 }
 
-export const CategoryGrid: React.FC<CategoryGridProps> = ({ onSelectCategory }) => {
+export const CategoryGrid: React.FC<CategoryGridProps> = ({ products, onSelectCategory }) => {
   const displayCats = CATEGORIES.filter((c) => c.id !== 'all');
 
   return (
@@ -26,34 +28,37 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({ onSelectCategory }) 
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-          {displayCats.map((cat) => (
-            <div
-              key={cat.id}
-              onClick={() => onSelectCategory(cat.id)}
-              className="group relative aspect-[4/5] rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 border border-gold-200/50"
-            >
-              <img
-                src={cat.image}
-                alt={cat.name}
-                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#101c33]/90 via-[#101c33]/30 to-transparent group-hover:from-[#101c33]/95 transition-colors" />
+          {displayCats.map((cat) => {
+            const actualCount = getCategoryCount(products, cat.id);
+            return (
+              <div
+                key={cat.id}
+                onClick={() => onSelectCategory(cat.id)}
+                className="group relative aspect-[4/5] rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 border border-gold-200/50"
+              >
+                <img
+                  src={cat.image}
+                  alt={cat.name}
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#101c33]/90 via-[#101c33]/30 to-transparent group-hover:from-[#101c33]/95 transition-colors" />
 
-              <div className="absolute bottom-4 left-4 right-4 text-white">
-                <span className="text-[10px] text-gold-300 uppercase tracking-widest font-mono">
-                  {cat.count} Designs
-                </span>
-                <h3 className="font-serif font-bold text-base sm:text-lg text-white group-hover:text-gold-200 transition-colors">
-                  {cat.name}
-                </h3>
-                <div className="flex items-center gap-1 text-[11px] text-gold-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity mt-1">
-                  <span>Explore Collection</span>
-                  <ArrowRight className="w-3 h-3" />
+                <div className="absolute bottom-4 left-4 right-4 text-white">
+                  <span className="text-[10px] text-gold-300 uppercase tracking-widest font-mono font-bold">
+                    {actualCount} {actualCount === 1 ? 'Design' : 'Designs'}
+                  </span>
+                  <h3 className="font-serif font-bold text-base sm:text-lg text-white group-hover:text-gold-200 transition-colors">
+                    {cat.name}
+                  </h3>
+                  <div className="flex items-center gap-1 text-[11px] text-gold-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity mt-1">
+                    <span>Explore Collection</span>
+                    <ArrowRight className="w-3 h-3" />
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
       </div>

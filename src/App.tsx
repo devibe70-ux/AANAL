@@ -60,7 +60,7 @@ export const AppContent: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleOrderSuccess = (order: Order) => {
+  const handleOrderSuccess = (_order: Order) => {
     setCurrentView('track');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -90,6 +90,7 @@ export const AppContent: React.FC = () => {
               onOpenStory={(p) => setStoryProduct(p)}
             />
             <CategoryGrid
+              products={PRODUCTS}
               onSelectCategory={(cat) => handleNavigate('shop', cat)}
             />
             <FeaturedCollections

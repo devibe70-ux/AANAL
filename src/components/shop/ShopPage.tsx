@@ -153,8 +153,8 @@ export const ShopPage: React.FC<ShopPageProps> = ({
               </select>
             </div>
 
-            <span className="text-xs font-mono text-slate-500">
-              {filteredProducts.length} items
+            <span className="text-xs font-mono text-slate-500 font-bold">
+              {filteredProducts.length} {filteredProducts.length === 1 ? 'item' : 'items'}
             </span>
           </div>
 
@@ -167,6 +167,7 @@ export const ShopPage: React.FC<ShopPageProps> = ({
           <div className="hidden lg:block lg:col-span-1">
             <div className="sticky top-28">
               <FilterSidebar
+                products={products}
                 selectedCategory={selectedCategory}
                 onSelectCategory={setSelectedCategory}
                 selectedOccasion={selectedOccasion}
@@ -192,6 +193,7 @@ export const ShopPage: React.FC<ShopPageProps> = ({
                   </button>
                 </div>
                 <FilterSidebar
+                  products={products}
                   selectedCategory={selectedCategory}
                   onSelectCategory={(c) => { setSelectedCategory(c); setMobileFilterOpen(false); }}
                   selectedOccasion={selectedOccasion}
